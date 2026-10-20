@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGTUFF Co-operative Ltd — Comprehensive Brand Standards Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #0f172a;
+      --card-border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --sgtuff-red: #eb2315;
+      --sgtuff-crimson: #c81e1e;
+      --sgtuff-navy: #0f172a;
+      --sgtuff-gold: #d97706;
+      --sgtuff-black: #000000;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding: 40px 24px;
+    }
+
+    .container { max-width: 1140px; margin: 0 auto; }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    .agency-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sgtuff-red);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .header-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 820px;
+    }
+
+    section { margin-bottom: 64px; }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      background: var(--sgtuff-red);
+      border-radius: 2px;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* LOGO SYSTEM */
+    .logo-hero-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .logo-hero-box img {
+      max-width: 100%;
+      height: auto;
+      max-height: 120px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .spec-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .spec-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f87171;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .spec-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* CLEAR SPACE DIAGRAM */
+    .clearspace-diagram {
+      border: 2px dashed #475569;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .clearspace-diagram span.tag {
+      position: absolute;
+      top: 10px;
+      left: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #38bdf8;
+    }
+
+    /* SOCIAL BANNER GRID */
+    .social-banner-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .banner-preview-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .banner-img-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .banner-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .banner-meta {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+    }
+
+    .banner-title {
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+
+    .banner-dims {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .btn-download {
+      background: #c81e1e;
+      color: white;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* FAVICONS GRID */
+    .favicon-row {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .fav-item {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .fav-item img {
+      background: white;
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .fav-item-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fav-item-name {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .fav-item-dims {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* COLOR ARCHITECTURE TABLE */
+    table.color-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    table.color-table th, table.color-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+
+    table.color-table th {
+      color: #94a3b8;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .swatch-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="agency-tag">Global Corporate Brand Identity Standard</div>
+      <h1>SGTUFF Co-Operative Ltd — Brand Guidelines</h1>
+      <p class="header-sub">
+        The exhaustive corporate identity system, clear-space specifications, digital asset suite, and statutory reproduction rules for Singapore Tenants United for Fairness.
+      </p>
+    </header>
+
+    <!-- SECTION 1: MASTER LOGO SYSTEM -->
+    <section>
+      <h2>1. The Official Master Logo System</h2>
+      <div class="panel">
+        <h3 style="font-size: 16px; margin-bottom: 16px;">Primary Master Wordmark (Full Horizontal Lockup)</h3>
+        <div class="logo-hero-box">
+          <img src="assets/sgtuff-logo.jpg" alt="SGTUFF Master Wordmark Logo">
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h4>Clear Space Rule (1X)</h4>
+            <p>Maintain an exclusion zone around the logo equal to the height of the letter "S" (denoted as <strong>X</strong>). No text, borders, or graphics may encroach.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Minimum Digital Size</h4>
+            <p><strong>140px width</strong> on standard 72/96 DPI displays. Never render smaller to preserve legibility of "SINGAPORE TENANTS UNITED FOR FAIRNESS".</p>
+          </div>
+          <div class="spec-card">
+            <h4>Minimum Print Size</h4>
+            <p><strong>38mm width</strong> at 300 DPI on physical stationery, name cards, and formal court/mediation documents.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Strict Restrictions</h4>
+            <p>Never stretch, skew, change the red hue to arbitrary colors, add heavy drop shadows, or place on unapproved low-contrast patterns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DIGITAL & SOCIAL MEDIA ASSET KIT -->
+    <section>
+      <h2>2. Digital & Social Media Asset Kit (Ready to Use)</h2>
+      <div class="panel">
+        <h3 style="font-size: 16px; margin-bottom: 20px;">Platform-Specific Banners & Covers</h3>
+        <div class="social-banner-grid">
+          <!-- LinkedIn -->
+          <div class="banner-preview-card">
+            <div class="banner-img-wrap">
+              <img src="assets/linkedin-company-cover-1584x396.png" alt="LinkedIn Company Cover">
+            </div>
+            <div class="banner-meta">
+              <div>
+                <div class="banner-title">LinkedIn Official Organization Cover</div>
+                <div class="banner-dims">1584 × 396 px (High-Resolution Retina)</div>
+              </div>
+              <a href="assets/linkedin-company-cover-1584x396.png" download class="btn-download">Download PNG</a>
+            </div>
+          </div>
+
+          <!-- Twitter / X -->
+          <div class="banner-preview-card">
+            <div class="banner-img-wrap">
+              <img src="assets/twitter-x-header-1500x500.png" alt="Twitter X Header">
+            </div>
+            <div class="banner-meta">
+              <div>
+                <div class="banner-title">X / Twitter Official Header Banner</div>
+                <div class="banner-dims">1500 × 500 px (3:1 Ratio)</div>
+              </div>
+              <a href="assets/twitter-x-header-1500x500.png" download class="btn-download">Download PNG</a>
+            </div>
+          </div>
+
+          <!-- Facebook -->
+          <div class="banner-preview-card">
+            <div class="banner-img-wrap">
+              <img src="assets/facebook-page-cover-820x312.png" alt="Facebook Cover">
+            </div>
+            <div class="banner-meta">
+              <div>
+                <div class="banner-title">Facebook Page Cover Banner</div>
+                <div class="banner-dims">820 × 312 px (Mobile & Desktop Responsive)</div>
+              </div>
+              <a href="assets/facebook-page-cover-820x312.png" download class="btn-download">Download PNG</a>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 16px; margin: 36px 0 20px 0;">Official Favicons & App Icons Suite</h3>
+        <div class="favicon-row">
+          <div class="fav-item">
+            <img src="assets/favicon-16x16.png" width="16" height="16" alt="16x16 Favicon">
+            <div class="fav-item-info">
+              <span class="fav-item-name">Browser Tab</span>
+              <span class="fav-item-dims">16 × 16 px</span>
+            </div>
+          </div>
+
+          <div class="fav-item">
+            <img src="assets/favicon-32x32.png" width="32" height="32" alt="32x32 Favicon">
+            <div class="fav-item-info">
+              <span class="fav-item-name">Standard Favicon</span>
+              <span class="fav-item-dims">32 × 32 px</span>
+            </div>
+          </div>
+
+          <div class="fav-item">
+            <img src="assets/apple-touch-icon.png" width="48" height="48" alt="Apple Touch Icon">
+            <div class="fav-item-info">
+              <span class="fav-item-name">Apple Touch Icon</span>
+              <span class="fav-item-dims">180 × 180 px</span>
+            </div>
+          </div>
+
+          <div class="fav-item">
+            <img src="assets/android-chrome-512x512.png" width="48" height="48" alt="PWA Icon">
+            <div class="fav-item-info">
+              <span class="fav-item-name">PWA / High-Res</span>
+              <span class="fav-item-dims">512 × 512 px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COLOR SYSTEM -->
+    <section>
+      <h2>3. The Comprehensive Color Architecture</h2>
+      <div class="panel">
+        <table class="color-table">
+          <thead>
+            <tr>
+              <th>Color Name</th>
+              <th>Role & Usage</th>
+              <th>HEX</th>
+              <th>RGB</th>
+              <th>CMYK (Print Match)</th>
+              <th>Pantone Approx.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="swatch-circle" style="background: #EB2315;"></span>
+                <strong>SGTUFF Singapore Red</strong>
+              </td>
+              <td>Primary Brand Color & Identity Accent</td>
+              <td><code style="color: #f87171;">#EB2315</code></td>
+              <td>235, 35, 21</td>
+              <td>0, 95, 95, 0</td>
+              <td>PMS 032 C</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="swatch-circle" style="background: #0F172A;"></span>
+                <strong>Co-operative Midnight Navy</strong>
+              </td>
+              <td>Institutional Authority, Letterhead, Business Cards</td>
+              <td><code>#0F172A</code></td>
+              <td>15, 23, 42</td>
+              <td>85, 75, 45, 60</td>
+              <td>PMS 289 C</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="swatch-circle" style="background: #000000;"></span>
+                <strong>Authority Black</strong>
+              </td>
+              <td>Primary Headlines & High-Contrast Wordmark</td>
+              <td><code>#000000</code></td>
+              <td>0, 0, 0</td>
+              <td>0, 0, 0, 100</td>
+              <td>Process Black</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="swatch-circle" style="background: #D97706;"></span>
+                <strong>Civic Gold Accent</strong>
+              </td>
+              <td>Patron Member Crest & Committee Highlights</td>
+              <td><code style="color: #fbbf24;">#D97706</code></td>
+              <td>217, 119, 6</td>
+              <td>15, 60, 100, 5</td>
+              <td>PMS 131 C</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="swatch-circle" style="background: #FFFFFF;"></span>
+                <strong>Crisp Canvas White</strong>
+              </td>
+              <td>Letterhead Ground, Web Canvas, Negative Space</td>
+              <td><code>#FFFFFF</code></td>
+              <td>255, 255, 255</td>
+              <td>0, 0, 0, 0</td>
+              <td>Bright White</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STATIONERY & COLLATERAL SUITE -->
+    <section>
+      <h2>4. Corporate Collateral & Print Stationery Suite</h2>
+      <div class="panel">
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+          All physical and digital stationery items are vector-accurate, print-ready, and directly accessible:
+        </p>
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h4>Statutory Letterhead</h4>
+            <p>MCCY-compliant A4 letterhead with live SGTUFF logo, FTIC badges, and formal notice layout.</p>
+            <a href="letterhead.html" target="_blank" style="color: #f87171; font-size: 12px; font-weight: 700; display: inline-block; margin-top: 8px;">Open A4 Letterhead →</a>
+          </div>
+
+          <div class="spec-card">
+            <h4>Executive Name Cards</h4>
+            <p>Dual-sided 90x54mm cards featuring the authentic logo and "Unity Is Strength" creed.</p>
+            <a href="business-cards.html" target="_blank" style="color: #f87171; font-size: 12px; font-weight: 700; display: inline-block; margin-top: 8px;">Open Business Cards →</a>
+          </div>
+
+          <div class="spec-card">
+            <h4>HTML Email Signature</h4>
+            <p>Universal table-based HTML signature with 1-click clipboard copy for Gmail, Apple Mail, and Outlook.</p>
+            <a href="email-signature.html" target="_blank" style="color: #f87171; font-size: 12px; font-weight: 700; display: inline-block; margin-top: 8px;">Open Signature Tool →</a>
+          </div>
+
+          <div class="spec-card">
+            <h4>Master Presentation Deck</h4>
+            <p>Interactive 16:9 widescreen presentation deck covering mission, clout, and 2026 platform roadmap.</p>
+            <a href="deck.html" target="_blank" style="color: #f87171; font-size: 12px; font-weight: 700; display: inline-block; margin-top: 8px;">Open Slide Deck →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
