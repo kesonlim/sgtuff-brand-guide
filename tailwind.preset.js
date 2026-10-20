@@ -1,25 +1,24 @@
 // SGTUFF Official Tailwind CSS Design Tokens Preset
-// Ready to be imported by sgtuff-platform, sgtuff-crm, and member tools
+// Accurately extracted from www.sgtuff.org.sg
 
 module.exports = {
   theme: {
     extend: {
       colors: {
         sgtuff: {
-          navy: '#0F172A',
-          blue: '#2563EB',
-          cyan: '#0EA5E9',
-          crimson: '#E11D48',
-          emerald: '#10B981',
+          red: '#EB2315',      // Official SGTUFF Red
+          redDark: '#C81E12',
+          black: '#000000',    // Authority Black
+          charcoal: '#1E293B',
+          white: '#FFFFFF',
           slate: '#F8FAFC',
-          border: '#1E293B',
-          surface: '#111827'
+          border: '#E2E8F0'
         }
       },
       fontFamily: {
-        display: ['Space Grotesk', 'sans-serif'],
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace']
+        sans: ['"Plus Jakarta Sans"', 'Helvetica', 'Arial', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace']
       }
     }
   }

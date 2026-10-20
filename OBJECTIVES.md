@@ -1,57 +1,74 @@
-# SGTUFF Co-operative Ltd: Brand & Strategic Objectives
+# SGTUFF Co-operative Ltd: Official Brand Guide & Institutional Objectives
 
 **Entity:** SGTUFF Co-operative Ltd  
-**Project:** `sgtuff-brand-guide`  
-**Classification:** P1 Core Entity Initiative  
-**Last Updated:** 21 October 2026  
+**Live Website Reference:** [www.sgtuff.org.sg](https://www.sgtuff.org.sg)  
+**Governing Authority:** Registry of Co-operative Societies, Ministry of Culture, Community, and Youth (MCCY)  
+**Established:** February 2020  
+**Current Milestone:** Phase 1 Ground Truth Brand & Objectives Baseline  
 
 ---
 
-## 1. Executive Purpose & Strategic Mission
-SGTUFF Co-operative Ltd is established to serve as the unified cooperative backbone for Singapore's independent workforce, creative technologists, freelancers, and agile enterprises.
-
-### Core Strategic Mandates:
-1. **Economic Solidarity & Collective Bargaining:** Pool resources to secure corporate-grade healthcare, insurance, dispute mediation, and statutory protections for independent professionals.
-2. **Professional Elevation & Standards:** Foster accredited competency frameworks, peer-reviewed standard contracts, and transparent fair-tenancy/fair-work practices.
-3. **Cooperative Ownership & Dividend Distribution:** Ensure surplus returns and platform governance flow directly back to registered cooperative members.
-
----
-
-## 2. Target Member Profiles & Personas
-* **Persona A: Creative Technologists & Developers:** Freelancers and digital agency consultants requiring robust contracts, cross-border invoicing standards, and collective benefits.
-* **Persona B: Gig & Independent Media Specialists:** Photographers, videographers, copywriters, and production crew needing industry rate benchmarks and payment protection.
-* **Persona C: Boutique Founders & Small Enterprises:** Micro-agencies seeking trusted peer subcontractors and cooperative bulk discounts on software and workspace facilities.
+## 1. Identity & Official Names
+* **Full Legal Name:** **SGTUFF Co-Operative Ltd**
+* **Brand Name:** **SGTUFF**
+* **Acronym Origin:** **Singapore Tenants United for Fairness**
+* **Official Motto / Creed:** *"Unity Is Strength"*
+* **Primary Mission Tagline:** *"Promoting Fair Tenancy & Retail Leasing Best Practices in Singapore"*
 
 ---
 
-## 3. Brand Identity Pillars & Tone of Voice
-* **Pillar 1: Institutional Trust (Solidarity & Governance):** Grounded in Singapore cooperative statutory compliance. We are steady, legitimate, and accountable.
-* **Pillar 2: Modern Tech Competence (Forward-Looking):** We speak the language of modern digital creators and developers, avoiding outdated bureaucratic jargon.
-* **Pillar 3: Uncompromising Advocacy (In the Member's Corner):** Fierce champions of fair compensation, swift invoice settlement, and intellectual property respect.
+## 2. Institutional Origins & Constituency
+SGTUFF came to life in February 2020 when the COVID-19 pandemic compelled business owners from Singapore's Retail, Food & Beverage (F&B), and Services sectors to unite and collectively address commercial tenancy challenges.
 
-### Tone of Voice Matrix:
-| Dimension | What SGTUFF Is | What SGTUFF Is Not |
-| :--- | :--- | :--- |
-| **Authority** | Credible, backed by law and collective strength | Stuffy, bureaucratic, or academic |
-| **Warmth** | Welcoming, collegial, community-driven | Casual to the point of unprofessional |
-| **Urgency** | Action-oriented, practical, delivering tools | Vague philosophical manifesto |
+### Collective Scale & Reach:
+* **700+** Verified frontline business owners
+* **600+** Commercial brands
+* **2,600+** Retail & dining outlets
+* **3.5 Million+ sq ft** of commercial footprint
+* **20,000+** Strong workforce represented
 
 ---
 
-## 4. Multi-Phase Roadmap for SGTUFF
-```mermaid
-graph LR
-    P1["Phase 1: Brand Guide<br/>(sgtuff-brand-guide)"] --> P2["Phase 2: Cooperative Web Portal<br/>(sgtuff-platform)"]
-    P2 --> P3["Phase 3: Membership CRM<br/>(Onboarding & Dues)"]
-    P3 --> P4["Phase 4: Member Tool Suite<br/>(Contract Generator, Rate Cards)"]
-```
+## 3. Statutory Standing & Strategic Partnerships
+SGTUFF represents the tenant community at the highest national levels:
+* **Government Dialogue:** Ministry of Trade and Industry (MTI), Ministry of Law (MinLaw).
+* **Fair Tenancy Framework:** Member of the **Fair Tenancy Industry Committee (FTIC)**, custodian of the industry-led *Code of Conduct for Leasing of Retail Premises in Singapore* (transparency, reciprocity, and sustainability).
+* **Trade Alliances:**
+  * Association of Small and Medium Enterprises (ASME)
+  * Restaurant Association of Singapore (RAS)
+  * Singapore Retailers Association (SRA)
+  * Singapore Business Federation (SBF)
+  * Franchising and Licensing Association (FLA)
+  * Singapore National Co-operative Federation (SNCF)
+  * Global Frontier 1 (China Business Network Partner)
 
-1. **Phase 1: Brand Guide (`sgtuff-brand-guide`) [CURRENT]**:
-   - Establish official color tokens, typography scales, SVG brand assets, and tone guide.
-   - Produce living interactive brand book and exportable Tailwind theme preset.
-2. **Phase 2: Web Platform (`sgtuff-platform`)**:
-   - Public-facing showcase, mission landing page, co-op leadership registry, and initial membership application funnel.
-3. **Phase 3: Membership CRM & Portal**:
-   - Secure member login, cooperative share capital tracking, automated annual dues, and verified credentials.
-4. **Phase 4: Member Utility Suite**:
-   - Fair contract builder, Singapore rate-card screener, prompt-payment escalation tools, and cooperative perks directory.
+---
+
+## 4. Current Core Offerings & Initiatives
+1. **Fair Tenancy Lease Advocacy:** Code of Conduct implementation, lease dispute guidance, and landlord negotiation support.
+2. **Accredited Workforce Training:** *Contract Development for Fair Tenancy Course (WSQ)* empowering business owners to evaluate lease agreements.
+3. **Frontline Welfare Support:** *Home Safety & Eldercare Support Program* for staff across retail, F&B, and services.
+4. **Structured Membership:**
+   * **Basic Membership:** $50 Registration Fee
+   * **Associate Membership:** $199 Per annum (Most Popular)
+   * **Patron Membership:** $999 Lifetime (Support the Cause)
+
+---
+
+## 5. Visual Identity & Color Standards (From Current Production Site)
+* **SGTUFF Red (Primary):** `#EB2315` / `#E31B23` (Symbolizing Singapore national roots, urgency, and solidarity)
+* **Coal Black (Typography & Contrast):** `#000000` / `#111827` (Authority, bold advocacy, clarity)
+* **Pure White (Canvas & Negative Space):** `#FFFFFF` / `#F8F9FA`
+* **Border Neutral:** `#E5E7EB` / `#D1D5DB`
+* **Typography:**
+  * Primary Wordmark: Heavy, geometric sans-serif (Bold / Black weights)
+  * Secondary Subtitle: High-tracking uppercase sans-serif (`SINGAPORE TENANTS UNITED FOR FAIRNESS`)
+  * Body Text: Clean readable sans-serif (Open Sans / Arial / Plus Jakarta Sans)
+
+---
+
+## 6. SGTUFF Digital Roadmap
+1. **Phase 1: Brand Guide (`sgtuff-brand-guide`) [ACTIVE]:** Lock down current identity assets, color tokens, and messaging framework.
+2. **Phase 2: Platform Modernization (`sgtuff-platform`):** Rebuild the WordPress site into a modern, lightning-fast web platform.
+3. **Phase 3: Membership CRM & Self-Service Portal:** Digital member directory, dues automation, and verified credentials.
+4. **Phase 4: Digital Tools Suite:** Fair lease checker, rental benchmark calculators, and dispute escalation tools.
