@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGTUFF — Visual Direction Comparison & Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@600;700;800&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --border: #1f2937;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(235, 35, 21, 0.15);
+      color: #ef4444;
+      border: 1px solid rgba(235, 35, 21, 0.3);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Comparison Grid */
+    .directions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 1024px) {
+      .directions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dir-column {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .dir-column:hover {
+      transform: translateY(-4px);
+    }
+
+    .dir-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dir-badge {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .dir-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .dir-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .dir-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+
+    .component-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* ---------------- DIRECTION A: INSTITUTIONAL ---------------- */
+    .col-a { border-top: 5px solid #c81e1e; }
+    .col-a:hover { border-color: #c81e1e; }
+    .badge-a { color: #f87171; }
+
+    .logo-mock-a {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .emblem-a {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #c81e1e 0%, #991b1b 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 4px 10px rgba(200, 30, 30, 0.3);
+    }
+    .wordmark-a h3 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+    .wordmark-a p {
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card-mock-a {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+      aspect-ratio: 1.7 / 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .card-mock-a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(200, 30, 30, 0.15));
+      border-right: 3px solid #c81e1e;
+    }
+    .card-name-a {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .card-role-a {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .card-org-a {
+      font-size: 10px;
+      font-weight: 700;
+      color: #ef4444;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .letterhead-mock-a {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .letterhead-top-a {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .lh-title-a {
+      font-weight: 800;
+      font-size: 12px;
+      color: #0f172a;
+    }
+    .lh-sub-a {
+      font-size: 8px;
+      color: #c81e1e;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .lh-body-a {
+      font-size: 9px;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .lh-footer-a {
+      font-size: 7.5px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      text-align: center;
+    }
+
+    /* ---------------- DIRECTION B: MODERN TECH CHAMBER ---------------- */
+    .col-b { border-top: 5px solid #0ea5e9; }
+    .col-b:hover { border-color: #0ea5e9; }
+    .badge-b { color: #38bdf8; }
+
+    .logo-mock-b {
+      background: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .emblem-b {
+      width: 44px;
+      height: 44px;
+      background: #111827;
+      border: 1px solid #0ea5e9;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0ea5e9;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
+    }
+    .wordmark-b h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+    .wordmark-b p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: #38bdf8;
+      letter-spacing: 0.1em;
+    }
+
+    .card-mock-b {
+      background: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+      aspect-ratio: 1.7 / 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card-top-b {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-name-b {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .card-role-b {
+      font-size: 11px;
+      color: #0ea5e9;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .card-bot-b {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: #64748b;
+    }
+
+    .letterhead-mock-b {
+      background: #0b0f19;
+      border: 1px solid #1e293b;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 10px;
+    }
+    .letterhead-top-b {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .lh-title-b {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      color: #38bdf8;
+    }
+    .lh-body-b {
+      font-size: 9px;
+      color: #94a3b8;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .lh-footer-b {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      color: #64748b;
+      border-top: 1px solid #1e293b;
+      padding-top: 6px;
+    }
+
+    /* ---------------- DIRECTION C: BOLD ACTIVIST CHAMPION ---------------- */
+    .col-c { border-top: 5px solid #eb2315; }
+    .col-c:hover { border-color: #eb2315; }
+    .badge-c { color: #f87171; }
+
+    .logo-mock-c {
+      background: #000000;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .emblem-c {
+      width: 44px;
+      height: 44px;
+      background: #eb2315;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: -0.05em;
+    }
+    .wordmark-c h3 {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      line-height: 1;
+    }
+    .wordmark-c p {
+      font-size: 9px;
+      font-weight: 800;
+      color: #eb2315;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .card-mock-c {
+      background: #000000;
+      border: 2px solid #eb2315;
+      border-radius: 8px;
+      padding: 20px;
+      aspect-ratio: 1.7 / 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-name-c {
+      font-size: 16px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+    .card-role-c {
+      font-size: 11px;
+      font-weight: 700;
+      color: #eb2315;
+      text-transform: uppercase;
+    }
+    .card-bot-c {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+    }
+
+    .letterhead-mock-c {
+      background: #ffffff;
+      color: #000000;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+    }
+    .letterhead-top-c {
+      background: #000000;
+      color: white;
+      padding: 10px 12px;
+      margin: -16px -16px 12px -16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #eb2315;
+    }
+    .lh-title-c {
+      font-weight: 900;
+      font-size: 13px;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+    .lh-body-c {
+      font-size: 9px;
+      color: #1f2937;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .lh-footer-c {
+      font-size: 7.5px;
+      font-weight: 700;
+      color: #4b5563;
+      border-top: 1px solid #000000;
+      padding-top: 6px;
+      text-align: center;
+    }
+
+    /* Web Preview Banner */
+    .web-preview {
+      background: #111827;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .palette-row {
+      display: flex;
+      gap: 6px;
+      height: 24px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .swatch { flex: 1; height: 100%; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="pill">Visual Brand Exploration</div>
+      <h1>Choose SGTUFF's Modernized Identity</h1>
+      <p class="lead">Compare the 3 visual directions below across their logo emblem, executive business card, official statutory letterhead, and color harmonies.</p>
+    </header>
+
+    <div class="directions-grid">
+      <!-- DIRECTION A -->
+      <div class="dir-column col-a">
+        <div class="dir-header">
+          <span class="dir-badge badge-a">Direction A — Recommended</span>
+          <div class="dir-title">Institutional Co-operative</div>
+          <p class="dir-desc">Prestigious, authoritative, and dignified. Commands immediate respect with MTI, MinLaw, FTIC, and big commercial mall landlords.</p>
+        </div>
+        <div class="dir-body">
+          <div>
+            <div class="component-label">Color Harmony</div>
+            <div class="palette-row">
+              <div class="swatch" style="background: #C81E1E;" title="SGTUFF Crimson"></div>
+              <div class="swatch" style="background: #0F172A;" title="Co-op Navy"></div>
+              <div class="swatch" style="background: #D97706;" title="Civic Gold"></div>
+              <div class="swatch" style="background: #F8FAFC;" title="Parchment White"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">1. Primary Logo & Wordmark</div>
+            <div class="logo-mock-a">
+              <div class="emblem-a">S</div>
+              <div class="wordmark-a">
+                <h3>SGTUFF</h3>
+                <p>Co-operative Ltd</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">2. Executive Business Card</div>
+            <div class="card-mock-a">
+              <div class="card-org-a">SGTUFF Co-operative Ltd</div>
+              <div>
+                <div class="card-name-a">Keson Lim</div>
+                <div class="card-role-a">Chairman / Board of Directors</div>
+              </div>
+              <div style="font-size: 9px; color: #64748b;">Singapore Tenants United for Fairness</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">3. Statutory Letterhead Snippet</div>
+            <div class="letterhead-mock-a">
+              <div class="letterhead-top-a">
+                <div>
+                  <div class="lh-title-a">SGTUFF CO-OPERATIVE LTD</div>
+                  <div class="lh-sub-a">Reg. under Co-operative Societies Act (MCCY)</div>
+                </div>
+                <div style="font-size: 8px; color: #64748b; text-align: right;">UEN: T20CS0001X<br>info@sgtuff.org.sg</div>
+              </div>
+              <div class="lh-body-a">
+                <strong>RE: REPRESENTATION ON CODE OF CONDUCT (RETAIL LEASING)</strong><br>
+                Dear Commercial Landlord / Stakeholder, on behalf of our 700+ verified business owners occupying 3.5M+ sq ft of retail space...
+              </div>
+              <div class="lh-footer-a">
+                Member of Fair Tenancy Industry Committee (FTIC) · MTI · MinLaw
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIRECTION B -->
+      <div class="dir-column col-b">
+        <div class="dir-header">
+          <span class="dir-badge badge-b">Direction B — Tech Forward</span>
+          <div class="dir-title">Modern Digital Chamber</div>
+          <p class="dir-desc">Clean, tech-savvy, and data-driven. Positions SGTUFF as the digital backbone of retail intelligence, benchmark calculators, and lease audits.</p>
+        </div>
+        <div class="dir-body">
+          <div>
+            <div class="component-label">Color Harmony</div>
+            <div class="palette-row">
+              <div class="swatch" style="background: #0EA5E9;" title="Electric Cyan"></div>
+              <div class="swatch" style="background: #0B0F19;" title="Deep Space Black"></div>
+              <div class="swatch" style="background: #EF4444;" title="Signal Red"></div>
+              <div class="swatch" style="background: #E2E8F0;" title="Silver White"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">1. Primary Logo & Wordmark</div>
+            <div class="logo-mock-b">
+              <div class="emblem-b">&gt;_</div>
+              <div class="wordmark-b">
+                <h3>sgtuff.</h3>
+                <p>RETAIL_CHAMBER_SG</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">2. Executive Business Card</div>
+            <div class="card-mock-b">
+              <div class="card-top-b">
+                <span style="font-size: 11px; font-weight: 800; color: #0ea5e9;">SGTUFF</span>
+                <span style="font-size: 8px; color: #64748b;">MEMBER_ID: #0001</span>
+              </div>
+              <div>
+                <div class="card-name-b">Keson Lim</div>
+                <div class="card-role-b">BOARD_DIRECTOR // CHAIR</div>
+              </div>
+              <div class="card-bot-b">coop.sgtuff.org.sg · +65 8845 6623</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">3. Digital Letterhead Snippet</div>
+            <div class="letterhead-mock-b">
+              <div class="letterhead-top-b">
+                <div class="lh-title-b">SGTUFF // CO-OPERATIVE PLATFORM</div>
+                <div style="font-family: 'JetBrains Mono'; font-size: 8px; color: #0ea5e9;">DATA_RELEASE_2026</div>
+              </div>
+              <div class="lh-body-b">
+                <strong>MEMORANDUM // FAIR LEASING BENCHMARK REPORT</strong><br>
+                Aggregated rental metrics and occupancy cost ratios across 2,600+ retail outlets in Singapore...
+              </div>
+              <div class="lh-footer-b">
+                API: api.sgtuff.org.sg · ENCRYPTED REGISTRY
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIRECTION C -->
+      <div class="dir-column col-c">
+        <div class="dir-header">
+          <span class="dir-badge badge-c">Direction C — Activist Solidarity</span>
+          <div class="dir-title">Bold Grassroots Champion</div>
+          <p class="dir-desc">High-contrast, bold, and tenant-first. Carries the raw energy of the 2020 founding movement with unapologetic solidarity and impact.</p>
+        </div>
+        <div class="dir-body">
+          <div>
+            <div class="component-label">Color Harmony</div>
+            <div class="palette-row">
+              <div class="swatch" style="background: #EB2315;" title="SGTUFF Red"></div>
+              <div class="swatch" style="background: #000000;" title="Pitch Black"></div>
+              <div class="swatch" style="background: #FFFFFF;" title="Pure White"></div>
+              <div class="swatch" style="background: #71717A;" title="Concrete Grey"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">1. Primary Logo & Wordmark</div>
+            <div class="logo-mock-c">
+              <div class="emblem-c">!</div>
+              <div class="wordmark-c">
+                <h3>SGTUFF</h3>
+                <p>UNITY IS STRENGTH</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">2. Executive Business Card</div>
+            <div class="card-mock-c">
+              <div style="font-size: 11px; font-weight: 900; color: #eb2315;">SINGAPORE TENANTS UNITED</div>
+              <div>
+                <div class="card-name-c">KESON LIM</div>
+                <div class="card-role-c">CHAIRMAN OF THE BOARD</div>
+              </div>
+              <div class="card-bot-c">WWW.SGTUFF.ORG.SG</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="component-label">3. Direct Action Letterhead Snippet</div>
+            <div class="letterhead-mock-c">
+              <div class="letterhead-top-c">
+                <div class="lh-title-c">SGTUFF — TENANTS UNITED</div>
+                <div style="font-size: 8px; font-weight: 700; color: #eb2315;">OFFICIAL NOTICE</div>
+              </div>
+              <div class="lh-body-c">
+                <strong>FORMAL DISPUTE ESCALATION & NOTICE OF FAIR TENANCY BREACH</strong><br>
+                Under the Code of Conduct for Leasing of Retail Premises, our collective membership represents 20,000+ frontline workers...
+              </div>
+              <div class="lh-footer-c">
+                SGTUFF CO-OPERATIVE LTD · UNITY IS STRENGTH
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

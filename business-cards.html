@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGTUFF Co-operative Ltd — Executive Business Cards (Print-Ready)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #090d16;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .toolbar {
+      background: #111827;
+      border: 1px solid #1f2937;
+      padding: 12px 24px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-print {
+      background: #c81e1e;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #991b1b;
+    }
+
+    .preview-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .card-section {
+      text-align: center;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+
+    /* Standard SG Business Card: 90mm x 54mm (approx 510px x 306px at 144 DPI preview) */
+    .business-card {
+      width: 510px;
+      height: 306px;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px 36px;
+      text-align: left;
+    }
+
+    /* FRONT DESIGN */
+    .card-front {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+    }
+
+    .card-front::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, #c81e1e, #d97706);
+    }
+
+    .front-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .emblem {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #c81e1e 0%, #991b1b 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(200, 30, 30, 0.4);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .logo-text h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .logo-text p {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .coop-badge {
+      font-size: 8px;
+      font-weight: 700;
+      color: #d97706;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .person-details {
+      margin-top: 10px;
+    }
+
+    .person-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    .person-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #f87171;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .person-dept {
+      font-size: 9.5px;
+      color: #94a3b8;
+    }
+
+    .front-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid #1e293b;
+      padding-top: 12px;
+    }
+
+    .contact-col {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .contact-item {
+      font-size: 9px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .uen-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5px;
+      color: #64748b;
+    }
+
+    /* BACK DESIGN */
+    .card-back {
+      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      border: 1px solid #1e293b;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-emblem {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #c81e1e 0%, #991b1b 100%);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 32px;
+      box-shadow: 0 8px 25px rgba(200, 30, 30, 0.4);
+      border: 1.5px solid rgba(255, 215, 0, 0.4);
+      margin-bottom: 16px;
+    }
+
+    .back-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .back-tagline {
+      font-size: 11px;
+      font-weight: 700;
+      color: #f87171;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+    }
+
+    .back-sub {
+      font-size: 9px;
+      color: #94a3b8;
+      max-width: 320px;
+      line-height: 1.4;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .toolbar, .card-label {
+        display: none !important;
+      }
+      .preview-container {
+        gap: 20mm;
+      }
+      .business-card {
+        box-shadow: none;
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span style="font-size: 13px; font-weight: 600;">SGTUFF Executive Card Specs: Standard SG 90mm x 54mm</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF (Cmd + P)</button>
+  </div>
+
+  <div class="preview-container">
+    <!-- FRONT -->
+    <div class="card-section">
+      <div class="card-label">Front (Primary Executive Details)</div>
+      <div class="business-card card-front">
+        <div class="front-top">
+          <div class="logo-lockup">
+            <div class="emblem">S</div>
+            <div class="logo-text">
+              <h2>SGTUFF</h2>
+              <p>Co-operative Ltd</p>
+            </div>
+          </div>
+          <div class="coop-badge">Registry of Co-ops (MCCY)</div>
+        </div>
+
+        <div class="person-details">
+          <div class="person-name">Keson Lim</div>
+          <div class="person-title">Chairman / Board of Directors</div>
+          <div class="person-dept">Singapore Tenants United for Fairness</div>
+        </div>
+
+        <div class="front-footer">
+          <div class="contact-col">
+            <div class="contact-item">✉️ info@sgtuff.org.sg</div>
+            <div class="contact-item">📞 +65 8845 6623 (WhatsApp)</div>
+            <div class="contact-item">🌐 www.sgtuff.org.sg</div>
+          </div>
+          <div class="uen-text">
+            REG: SGTUFF CO-OPERATIVE LTD<br>
+            FTIC COMMITTEE MEMBER
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK -->
+    <div class="card-section">
+      <div class="card-label">Back (Brand Creed & Crest)</div>
+      <div class="business-card card-back">
+        <div class="back-emblem">S</div>
+        <div class="back-title">SGTUFF</div>
+        <div class="back-tagline">"Unity Is Strength"</div>
+        <div class="back-sub">
+          Championing Fair Tenancy & Retail Leasing Best Practices for 700+ frontline business owners across Singapore.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

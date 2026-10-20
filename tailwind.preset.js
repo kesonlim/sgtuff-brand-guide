@@ -1,22 +1,26 @@
 // SGTUFF Official Tailwind CSS Design Tokens Preset
-// Accurately extracted from www.sgtuff.org.sg
+// Direction A: Institutional Co-operative & National Authority
 
 module.exports = {
   theme: {
     extend: {
       colors: {
         sgtuff: {
-          red: '#EB2315',      // Official SGTUFF Red
-          redDark: '#C81E12',
-          black: '#000000',    // Authority Black
-          charcoal: '#1E293B',
+          crimson: '#C81E1E',       // Primary State Crimson
+          crimsonDark: '#991B1B',
+          navy: '#0F172A',          // Co-operative Midnight Navy
+          navyLight: '#1E293B',
+          gold: '#D97706',          // Civic Gold Accent
+          goldLight: '#F59E0B',
           white: '#FFFFFF',
-          slate: '#F8FAFC',
-          border: '#E2E8F0'
+          parchment: '#F8FAFC',
+          border: '#1E293B',
+          surface: '#111827'
         }
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['"Cinzel"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         display: ['"Space Grotesk"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace']
       }

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGTUFF Co-operative Ltd — Official Statutory Letterhead (A4 Print-Ready)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #0f172a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #334155;
+    }
+
+    .toolbar {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 12px 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      color: #f8fafc;
+    }
+
+    .btn-print {
+      background: #c81e1e;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #991b1b;
+    }
+
+    /* Standard A4 dimensions: 210mm x 297mm (approx 794px x 1123px at 96 DPI screen preview) */
+    .a4-page {
+      width: 794px;
+      min-height: 1123px;
+      background: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      padding: 60px 64px 50px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* HEADER */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .emblem {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #c81e1e 0%, #991b1b 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 28px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 4px 10px rgba(200, 30, 30, 0.25);
+    }
+
+    .brand-titles h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    .brand-titles p {
+      font-size: 10px;
+      font-weight: 700;
+      color: #c81e1e;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .coop-authority {
+      font-size: 8.5px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .contact-meta {
+      text-align: right;
+      font-size: 9px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .contact-meta strong {
+      color: #0f172a;
+    }
+
+    .header-rule {
+      height: 3px;
+      background: linear-gradient(to right, #c81e1e 40%, #0f172a 40%);
+      margin-bottom: 24px;
+    }
+
+    .committee-banner {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8px;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 28px;
+    }
+
+    /* BODY */
+    .letter-body {
+      flex: 1;
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: #1e293b;
+    }
+
+    .letter-date {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .recipient-block {
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .subject-line {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .letter-body p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    .signoff-block {
+      margin-top: 36px;
+    }
+
+    .signature-space {
+      height: 48px;
+    }
+
+    .signatory-name {
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .signatory-title {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* FOOTER */
+    .letter-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 14px;
+      margin-top: 30px;
+      text-align: center;
+      font-size: 8px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .footer-reg {
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 2px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .a4-page {
+        box-shadow: none;
+        width: 100%;
+        min-height: auto;
+        padding: 20mm 20mm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span style="font-size: 13px; font-weight: 600;">Official Statutory A4 Letterhead Format</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF (Cmd + P)</button>
+  </div>
+
+  <div class="a4-page">
+    <div>
+      <div class="header-top">
+        <div class="brand-lockup">
+          <div class="emblem">S</div>
+          <div class="brand-titles">
+            <h1>SGTUFF CO-OPERATIVE LTD</h1>
+            <p>Singapore Tenants United for Fairness</p>
+            <div class="coop-authority">Reg. under Co-operative Societies Act · Ministry of Culture, Community, and Youth (MCCY)</div>
+          </div>
+        </div>
+
+        <div class="contact-meta">
+          <div><strong>Official Secretariat:</strong> info@sgtuff.org.sg</div>
+          <div><strong>WhatsApp Inquiries:</strong> +65 8845 6623</div>
+          <div><strong>Web Portal:</strong> www.sgtuff.org.sg</div>
+          <div><strong>UEN:</strong> SGTUFF Co-Operative Ltd</div>
+        </div>
+      </div>
+
+      <div class="header-rule"></div>
+
+      <div class="committee-banner">
+        <span>Fair Tenancy Industry Committee (FTIC)</span>
+        <span>•</span>
+        <span>Ministry of Trade & Industry (MTI)</span>
+        <span>•</span>
+        <span>Ministry of Law (MinLaw)</span>
+        <span>•</span>
+        <span>ASME · RAS · SRA · SNCF</span>
+      </div>
+
+      <div class="letter-body">
+        <div class="letter-date">21 October 2026</div>
+
+        <div class="recipient-block">
+          <strong>To: All Commercial Mall Landlords & Property Management Stakeholders</strong><br>
+          Commercial Leasing & Asset Management Division<br>
+          Singapore
+        </div>
+
+        <div class="subject-line">
+          RE: ADHERENCE TO THE CODE OF CONDUCT FOR LEASING OF RETAIL PREMISES IN SINGAPORE
+        </div>
+
+        <p>
+          Dear Sir / Madam,
+        </p>
+
+        <p>
+          SGTUFF Co-operative Ltd writes to you on behalf of our collective membership comprising <strong>700+ verified frontline business owners</strong>, representing over <strong>600 commercial brands across 2,600+ retail and food & beverage outlets</strong> occupying more than 3.5 million square feet of commercial space in Singapore.
+        </p>
+
+        <p>
+          As an active constituent organization within the <strong>Fair Tenancy Industry Committee (FTIC)</strong>, SGTUFF remains firmly committed to upholding the industry-led Code of Conduct for Leasing of Retail Premises. We urge all commercial leasing partners to align negotiation practices with the foundational pillars of <em>transparency, reciprocity, and long-term sustainability</em>.
+        </p>
+
+        <p>
+          Our secretariat stands ready to engage in constructive dialogue, lease mediation, and joint industry initiatives to support the mutual vibrancy and economic resilience of Singapore's retail and lifestyle landscape.
+        </p>
+
+        <div class="signoff-block">
+          <div>Yours sincerely,</div>
+          <div class="signature-space"></div>
+          <div class="signatory-name">Keson Lim</div>
+          <div class="signatory-title">Chairman, Board of Directors</div>
+          <div class="signatory-title">SGTUFF Co-operative Ltd</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="letter-footer">
+      <div class="footer-reg">SGTUFF CO-OPERATIVE LTD · "UNITY IS STRENGTH"</div>
+      <div>
+        Governed under the Registry of Co-operative Societies, Ministry of Culture, Community, and Youth (MCCY) Singapore.<br>
+        Confidential Notice: This official correspondence contains privileged cooperative representations. Unauthorised dissemination is strictly prohibited.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
