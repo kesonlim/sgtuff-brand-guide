@@ -1,0 +1,31 @@
+/* SGTUFF brand tokens, v2 (locked 23 Oct 2026). Source of truth: BRAND.md */
+:root {
+  /* Colour */
+  --tuff-red: #E8352A;      /* Signature: logo, primary buttons, key moments */
+  --tuff-red-ink: #C1271D;  /* Red text and links on light backgrounds (5.5:1 on paper) */
+  --ink: #14161A;           /* Body text, dark backgrounds */
+  --paper: #FAF7F2;         /* Default background */
+  --marker: #FFD43B;        /* Highlight behind words and stats, sparingly */
+  --pandan: #0E7C56;        /* Positive data, success states */
+  --stone: #6B665E;         /* Secondary text, captions, borders */
+  --white: #FFFFFF;
+
+  /* Type */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-text: "Inter", system-ui, sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, monospace;
+  --font-zh: "Noto Sans SC", "Inter", sans-serif;
+  --font-ta: "Noto Sans Tamil", "Inter", sans-serif;
+
+  /* Shape and space */
+  --radius-card: 12px;
+  --radius-input: 4px;
+  --space-unit: 8px;
+  --border: 1px solid rgb(107 102 94 / 0.2);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-signature: 400ms;
+}
