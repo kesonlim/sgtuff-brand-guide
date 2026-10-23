@@ -2,6 +2,8 @@
 
 The brand identity for SGTUFF Co-operative Ltd (Singapore Tenants United for Fairness). **Version 2, locked 23 Oct 2026.**
 
+> The canonical copy lives in the parent repo, `sgtuff-cooperative/brand/`. This repo is the public viewer. Make brand changes there first, then sync here.
+
 Direction: Grassroots Modern. One hot red, a characterful grotesk, real shopkeepers, plain words. Tagline: *Tough together.*
 
 ## What's here
