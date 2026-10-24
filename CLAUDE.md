@@ -7,5 +7,5 @@ This repo is the **source of truth for the SGTUFF brand** (v2, locked 23 Oct 202
 - Use the tokens in `tokens/` or `tailwind.preset.js`. Do not invent new colours or fonts.
 - `legacy-v1/` is archived. Do not copy its colours (navy, gold, crimson), fonts (Cinzel, Plus Jakarta Sans) or claims ("statutory", "MCCY-compliant", "official partnerships").
 - Factual claims: Terence Yow is Chairman and holds the Fair Tenancy Industry Committee appointment. Describe SGTUFF as a registered co-operative society, not a statutory body.
-- Member count: use only this baseline, verbatim: "Representing over 1,000 frontline retail, F&B, and service business owners across Singapore." Do not add brand, outlet or floor-area numbers.
+- Member count: use only this baseline, verbatim: "Representing 700+ frontline business owners, 600+ brands and 2,600+ outlets across Singapore (as of Oct 2026)." Always show the "as of" date. Do not use the older 1,000+ figure.
 - Voice: plain, short sentences; numbers over adjectives; firm, never shrill.

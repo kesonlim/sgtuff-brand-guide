@@ -16,7 +16,7 @@ v1 is a tidy collateral pack, not a brand system, and it points the wrong way. I
 
 1. Approve the Grassroots Modern direction over v1's Direction A (Institutional).
 2. Logo locked: the SGTUFF wordmark with the Unity U (Section 5).
-3. Settled: one member-count baseline for all copy: "Representing over 1,000 frontline retail, F&B, and service business owners across Singapore."
+3. Settled (updated 24 Oct 2026): one member-count baseline for all copy: "Representing 700+ frontline business owners, 600+ brands and 2,600+ outlets across Singapore (as of Oct 2026)."
 4. Settled: Terence Yow is Chairman and holds the FTIC appointment; Keson Lim's card title is COM.
 
 ## 1. Audit of v1
@@ -67,7 +67,7 @@ These are the most urgent fixes, because they could embarrass SGTUFF with the go
 | "MCCY-compliant letterhead" | I found no such standard. | Remove. |
 | "Custodian of the Code of Conduct" | The code is industry-wide, not owned by SGTUFF. | Use "helped shape" or "champions". |
 | "Confidential" footer on a public letter to landlords | Contradicts the letter's purpose. | Remove from general letterhead. |
-| Member figures (700+ owners, 600 brands, 2,600+ outlets) | v1 contradicted itself and public sources. SNCF reported 1,000+ owners in 2021 ([SNCF](https://www.sncf.coop/newsletters/new-co-op-aims-to-bridge-tenant-landlord-relationships)); 700 matches the 2020 founding figure ([Mothership](https://mothership.sg/2020/05/covid-19-landlords-tenants//amp)). | Settled: use only the baseline "Representing over 1,000 frontline retail, F&B, and service business owners across Singapore." Drop brand, outlet and floor-area figures until verified. |
+| Member figures (700+ owners, 600 brands, 2,600+ outlets) | v1 contradicted itself and public sources. SNCF reported 1,000+ owners in 2021 ([SNCF](https://www.sncf.coop/newsletters/new-co-op-aims-to-bridge-tenant-landlord-relationships)); 700 matches the 2020 founding figure ([Mothership](https://mothership.sg/2020/05/covid-19-landlords-tenants//amp)). | Settled 24 Oct 2026 by Keson Lim: use only the baseline "Representing 700+ frontline business owners, 600+ brands and 2,600+ outlets across Singapore (as of Oct 2026)." Always date it. Do not mix in the older 1,000+ figure. |
 | Chairman named as Keson Lim | A recent interview names Terence Yow as chairman ([The Independent SG](https://theindependent.sg/a-sustainable-retail-sector-needs-landlords-and-tenants-to-succeed-together-singapore-tenants-united-for-fairness-sgtuff)). | Confirmed: Terence Yow is Chairman. Letters signed as Chairman go out under his name; Keson Lim's materials use the title COM. |
 | No UEN or registered address | Expected on formal letters. | Add both. |
 
@@ -118,7 +118,7 @@ SGTUFF is the owner-run co-op that gives Singapore's independent shops and eater
 
 - **Purpose:** keep Singapore's neighbourhood shops and eateries alive and thriving.
 - **Positioning:** a movement with tools. Grassroots in who runs it, modern in how it works.
-- **Member baseline (use verbatim):** "Representing over 1,000 frontline retail, F&B, and service business owners across Singapore."
+- **Member baseline (use verbatim):** "Representing 700+ frontline business owners, 600+ brands and 2,600+ outlets across Singapore (as of Oct 2026)."
 - **Proof points:** owner-run since February 2020; a seat at the fair-tenancy table; shared services and lease help that save members real money.
 - **What we are not:** a ministry, a law firm or a protest group.
 
@@ -172,7 +172,7 @@ SGTUFF sounds like a sharp shop owner explaining things to a neighbour: short se
 | Audience | Tone | Example |
 | --- | --- | --- |
 | Members | Warm, direct | "Lease renewal coming up? Send us your offer letter. We'll benchmark it in 48 hours." |
-| Prospects | Confident, inviting | "Over 1,000 owners already negotiate together. Join for $50." |
+| Prospects | Confident, inviting | "700+ owners already negotiate together. Join for $50." |
 | Landlords | Calm, evidence-led | "Across 40 member renewals this quarter, the median increase was 18%. We'd like to discuss a fairer framework." |
 | Government and media | Precise, constructive | "Three changes would protect established tenants without capping rents." |
 
@@ -398,7 +398,7 @@ Nothing goes to print until the first list is ticked; the second list is the bui
 
 ### 10.1 Verify before printing
 
-- [x] Member numbers: single baseline settled (see Section 1.3). Review it each year.
+- [x] Member numbers: single baseline settled 24 Oct 2026 (see Section 1.3). Review it each year.
 - [x] Chair and titles: Terence Yow, Chairman; Keson Lim, COM
 - [x] FTIC role: appointment held by Terence Yow
 - [x] Permission from each partner or ministry before listing them
