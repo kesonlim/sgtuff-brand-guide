@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGTUFF Membership Certificate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../tokens/tokens.css">
+<style>:root{--tw:297mm}@page{size:A4 landscape;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEAE2;font-family:var(--font-text);color:var(--ink);padding:32px 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.toolbar{max-width:var(--tw,720px);margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--stone)}
+.toolbar button{background:var(--tuff-red);color:#fff;border:0;border-radius:var(--radius-input);padding:10px 18px;font:600 14px var(--font-text);cursor:pointer;flex:none}
+.toolbar button:hover,.toolbar button:focus-visible{background:var(--tuff-red-ink);outline:none}
+.label{font:600 11px var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin:20px auto 8px;max-width:var(--tw,720px)}
+.stage{display:flex;flex-direction:column;align-items:center;gap:8px}
+.canvas{position:relative;overflow:hidden;box-shadow:0 6px 24px rgb(20 22 26/.15);flex:none}
+.wm{display:block;height:auto}
+.qr{display:block;width:100%;height:auto}
+.ph{background:var(--marker);color:var(--ink);padding:0 .15em;border-radius:2px}
+.ic{flex:none}
+@media print{body{background:none;padding:0}.toolbar,.label{display:none}.canvas{box-shadow:none;break-after:page;page-break-after:always}.ph{background:none}}
+
+.cert{width:297mm;height:210mm;background:var(--paper);padding:18mm 22mm;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cert::before{content:"";position:absolute;inset:7mm;border:.5mm solid rgb(107 102 94/.35);border-radius:3mm;pointer-events:none}
+.cert::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4mm;background:var(--tuff-red)}
+.cert .bgm{position:absolute;right:-18mm;bottom:-22mm;width:110mm;height:auto;opacity:.06}
+.cert .wm{width:70mm;margin-top:4mm}
+.cert .k{font:600 9pt var(--font-text);letter-spacing:.24em;text-transform:uppercase;color:var(--tuff-red-ink);margin-top:12mm}
+.cert h1{font:800 30pt/1 var(--font-display);letter-spacing:-.015em;margin-top:4mm}
+.cert .pre{font-size:11pt;color:var(--stone);margin-top:10mm}
+.cert .name{font:800 26pt/1.1 var(--font-display);margin-top:3mm}
+.cert .biz{font:500 13pt var(--font-text);margin-top:2mm}
+.cert .body{font-size:11pt;line-height:1.55;margin-top:7mm;max-width:190mm}
+.cert .row{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin-top:auto}
+.cert .sig{text-align:left;width:70mm}
+.cert .sig .line{border-bottom:.3mm solid var(--ink);height:14mm}
+.cert .sig b{display:block;font:800 11pt var(--font-display);margin-top:2mm}
+.cert .sig span{font:600 7.5pt var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--tuff-red-ink)}
+.cert dl{display:grid;grid-template-columns:auto auto;gap:1.5mm 5mm;text-align:left;font-size:9pt}
+.cert dt{color:var(--stone)} .cert dd{font:500 9pt var(--font-data)}
+.cert .tag{font:800 13pt var(--font-display);color:var(--tuff-red-ink);width:70mm;text-align:right}
+</style></head><body>
+<div class="toolbar"><span>A4 landscape. Fill in the highlighted fields, then print on 250 gsm uncoated paper.</span><button onclick="window.print()">Print</button></div>
+<div class="stage"><div class="canvas cert"><svg class="bgm" xmlns="http://www.w3.org/2000/svg" viewBox="15 7 170 210" aria-hidden="true"><circle cx="42.5" cy="30" r="19" fill="#E8352A"/><circle cx="157.5" cy="30" r="19" fill="#E8352A"/><circle cx="42.5" cy="82" r="23.5" fill="#E8352A"/><circle cx="157.5" cy="82" r="23.5" fill="#E8352A"/><path d="M42.5 82 V147.5 A57.5 42.5 0 0 0 90 189.35" fill="none" stroke="#E8352A" stroke-width="47"/><path d="M157.5 82 V147.5 A57.5 42.5 0 0 1 110 189.35" fill="none" stroke="#E8352A" stroke-width="47"/></svg>
+<img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-primary.svg" alt="SGTUFF">
+<p class="k">Certificate of membership</p><h1>Tough together.</h1>
+<p class="pre">This certifies that</p><p class="name"><span class="ph">[Member name]</span></p><p class="biz"><span class="ph">[Business name]</span></p>
+<p class="body">is a <span class="ph">[Associate]</span> member of SGTUFF Co-operative Ltd, a registered co-operative society of frontline business owners in Singapore.</p>
+<div class="row"><div class="sig"><div class="line"></div><b>Terence Yow</b><span>Chairman</span></div>
+<dl><dt>Member no.</dt><dd><span class="ph">[SG-00000]</span></dd><dt>Member since</dt><dd><span class="ph">[DD MMM YYYY]</span></dd></dl>
+<div class="tag">sgtuff.org.sg</div></div>
+</div></div>
+</body></html>

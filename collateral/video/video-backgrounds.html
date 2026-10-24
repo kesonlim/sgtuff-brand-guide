@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGTUFF Video Call Backgrounds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../tokens/tokens.css">
+<style>:root{--tw:700px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEAE2;font-family:var(--font-text);color:var(--ink);padding:32px 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.toolbar{max-width:var(--tw,720px);margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--stone)}
+.toolbar button{background:var(--tuff-red);color:#fff;border:0;border-radius:var(--radius-input);padding:10px 18px;font:600 14px var(--font-text);cursor:pointer;flex:none}
+.toolbar button:hover,.toolbar button:focus-visible{background:var(--tuff-red-ink);outline:none}
+.label{font:600 11px var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin:20px auto 8px;max-width:var(--tw,720px)}
+.stage{display:flex;flex-direction:column;align-items:center;gap:8px}
+.canvas{position:relative;overflow:hidden;box-shadow:0 6px 24px rgb(20 22 26/.15);flex:none}
+.wm{display:block;height:auto}
+.qr{display:block;width:100%;height:auto}
+.ph{background:var(--marker);color:var(--ink);padding:0 .15em;border-radius:2px}
+.ic{flex:none}
+@media print{body{background:none;padding:0}.toolbar,.label{display:none}.canvas{box-shadow:none;break-after:page;page-break-after:always}.ph{background:none}}
+
+@media screen{.vz{zoom:.36}}
+.v{width:1920px;height:1080px;padding:80px 96px}
+.v .wm{height:64px;width:auto;position:absolute;left:96px;top:80px}
+.v .tag{position:absolute;left:96px;bottom:80px;font:800 44px var(--font-display)}
+.v .url{position:absolute;right:96px;bottom:84px;font:500 26px var(--font-data)}
+.v .mark{position:absolute;right:-60px;top:120px;width:520px}
+.vp{background:var(--paper)} .vp .mark{opacity:.08} .vp .tag{color:var(--tuff-red-ink)} .vp .url{color:var(--stone)}
+.vi{background:var(--ink);color:var(--paper)} .vi .mark{opacity:.14} .vi .tag{color:var(--tuff-red)} .vi .url{color:rgb(250 247 242/.6)}
+</style></head><body>
+<div class="toolbar"><span>Zoom, Teams and Google Meet backgrounds. Logo sits top-left so your head does not cover it. Exports in video/exports.</span></div>
+<div class="stage vz">
+<p class="label">Paper · 1920 × 1080</p>
+<div class="canvas v vp"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="15 7 170 210" aria-hidden="true"><circle cx="42.5" cy="30" r="19" fill="#E8352A"/><circle cx="157.5" cy="30" r="19" fill="#E8352A"/><circle cx="42.5" cy="82" r="23.5" fill="#E8352A"/><circle cx="157.5" cy="82" r="23.5" fill="#E8352A"/><path d="M42.5 82 V147.5 A57.5 42.5 0 0 0 90 189.35" fill="none" stroke="#E8352A" stroke-width="47"/><path d="M157.5 82 V147.5 A57.5 42.5 0 0 1 110 189.35" fill="none" stroke="#E8352A" stroke-width="47"/></svg><img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-primary.svg" alt="SGTUFF"><p class="tag">Tough together.</p><p class="url">sgtuff.org.sg</p></div>
+<p class="label">Ink · 1920 × 1080</p>
+<div class="canvas v vi"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="15 7 170 210" aria-hidden="true"><circle cx="42.5" cy="30" r="19" fill="#E8352A"/><circle cx="157.5" cy="30" r="19" fill="#E8352A"/><circle cx="42.5" cy="82" r="23.5" fill="#E8352A"/><circle cx="157.5" cy="82" r="23.5" fill="#E8352A"/><path d="M42.5 82 V147.5 A57.5 42.5 0 0 0 90 189.35" fill="none" stroke="#E8352A" stroke-width="47"/><path d="M157.5 82 V147.5 A57.5 42.5 0 0 1 110 189.35" fill="none" stroke="#E8352A" stroke-width="47"/></svg><img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-night-unity.svg" alt="SGTUFF"><p class="tag">Tough together.</p><p class="url">sgtuff.org.sg</p></div>
+</div>
+</body></html>

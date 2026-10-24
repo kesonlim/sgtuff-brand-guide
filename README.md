@@ -16,6 +16,7 @@ Direction: Grassroots Modern. One hot red, a characterful grotesk, real shopkeep
 | [`tokens/tokens.css`](tokens/tokens.css) | CSS custom properties for colour, type, radius, motion |
 | [`tokens/tokens.json`](tokens/tokens.json) | The same tokens as JSON, plus the logo colour-combination map |
 | [`tailwind.preset.js`](tailwind.preset.js) | Tailwind preset with brand colours and shadcn-style semantic aliases |
+| [`collateral/`](collateral/) | Print-ready templates: cards, letterhead, email signatures, shop decal, fact sheet, certificate, member card, social, WhatsApp, event and video kits |
 | [`index.html`](index.html) | A one-page visual overview of the system |
 | [`legacy-v1/`](legacy-v1/) | Archived v1 (Direction A, Institutional). Do not use |
 

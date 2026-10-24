@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGTUFF Member Shop Decal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../tokens/tokens.css">
+<style>:root{--tw:720px}@page{size:120mm 120mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEAE2;font-family:var(--font-text);color:var(--ink);padding:32px 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.toolbar{max-width:var(--tw,720px);margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--stone)}
+.toolbar button{background:var(--tuff-red);color:#fff;border:0;border-radius:var(--radius-input);padding:10px 18px;font:600 14px var(--font-text);cursor:pointer;flex:none}
+.toolbar button:hover,.toolbar button:focus-visible{background:var(--tuff-red-ink);outline:none}
+.label{font:600 11px var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin:20px auto 8px;max-width:var(--tw,720px)}
+.stage{display:flex;flex-direction:column;align-items:center;gap:8px}
+.canvas{position:relative;overflow:hidden;box-shadow:0 6px 24px rgb(20 22 26/.15);flex:none}
+.wm{display:block;height:auto}
+.qr{display:block;width:100%;height:auto}
+.ph{background:var(--marker);color:var(--ink);padding:0 .15em;border-radius:2px}
+.ic{flex:none}
+@media print{body{background:none;padding:0}.toolbar,.label{display:none}.canvas{box-shadow:none;break-after:page;page-break-after:always}.ph{background:none}}
+
+.dsq{width:120mm;height:120mm;border-radius:10mm;background:var(--tuff-red);color:#fff;padding:11mm;display:flex;flex-direction:column;justify-content:space-between}
+.dsq .top{display:flex;justify-content:space-between;align-items:flex-start}
+.dsq .mark{width:24mm;height:auto}
+.dsq .yr{font:500 4mm/1 var(--font-data);letter-spacing:.06em;border:.5mm solid rgb(255 255 255/.6);border-radius:10mm;padding:2mm 3.5mm}
+.dsq .kicker{font:700 4.2mm/1 var(--font-text);letter-spacing:.18em;text-transform:uppercase}
+.dsq h2{font:800 14mm/.95 var(--font-display);letter-spacing:-.02em;margin-top:3mm}
+.dsq .wm{width:70mm;margin-top:6mm}
+.dsq .foot{display:flex;justify-content:space-between;align-items:flex-end;font:600 3.6mm var(--font-text)}
+.dci{width:100mm;height:100mm;border-radius:50%;background:var(--paper);border:3.5mm solid var(--tuff-red);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3mm}
+.dci .k{font:700 3.6mm/1 var(--font-text);letter-spacing:.2em;text-transform:uppercase;color:var(--tuff-red-ink)}
+.dci .wm{width:56mm}
+.dci .t{font:800 6.4mm/1 var(--font-display)}
+.dci .y{font:500 3.4mm/1 var(--font-data);color:var(--stone)}
+</style></head><body>
+<div class="toolbar"><span>Vinyl decal. For inside-glass mounting, ask the printer to mirror and print on clear vinyl with a white backing layer. Add 3 mm bleed.</span><button onclick="window.print()">Print</button></div>
+<div class="stage">
+<p class="label">Square · 120 × 120 mm · TUFF Red</p>
+<div class="canvas dsq"><div class="top"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="15 7 170 210" aria-hidden="true"><circle cx="42.5" cy="30" r="19" fill="#FFFFFF"/><circle cx="157.5" cy="30" r="19" fill="#FFFFFF"/><circle cx="42.5" cy="82" r="23.5" fill="#FFFFFF"/><circle cx="157.5" cy="82" r="23.5" fill="#FFFFFF"/><path d="M42.5 82 V147.5 A57.5 42.5 0 0 0 90 189.35" fill="none" stroke="#FFFFFF" stroke-width="47"/><path d="M157.5 82 V147.5 A57.5 42.5 0 0 1 110 189.35" fill="none" stroke="#FFFFFF" stroke-width="47"/></svg><span class="yr">2026</span></div>
+<div><p class="kicker">Proud member</p><h2>We stand<br>together<br>on rent.</h2></div>
+<div class="foot"><img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-paper.svg" alt="SGTUFF" style="width:46mm;margin:0"><span>sgtuff.org.sg</span></div></div>
+<p class="label">Round · 100 mm · Paper</p>
+<div class="canvas dci"><p class="k">Proud member</p><img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-primary.svg" alt="SGTUFF"><p class="t">Tough together.</p><p class="y">MEMBER 2026</p></div>
+</div>
+</body></html>

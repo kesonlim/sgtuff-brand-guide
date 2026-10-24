@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGTUFF Fact Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../tokens/tokens.css">
+<style>:root{--tw:210mm}@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#EFEAE2;font-family:var(--font-text);color:var(--ink);padding:32px 16px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.toolbar{max-width:var(--tw,720px);margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--stone)}
+.toolbar button{background:var(--tuff-red);color:#fff;border:0;border-radius:var(--radius-input);padding:10px 18px;font:600 14px var(--font-text);cursor:pointer;flex:none}
+.toolbar button:hover,.toolbar button:focus-visible{background:var(--tuff-red-ink);outline:none}
+.label{font:600 11px var(--font-text);letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin:20px auto 8px;max-width:var(--tw,720px)}
+.stage{display:flex;flex-direction:column;align-items:center;gap:8px}
+.canvas{position:relative;overflow:hidden;box-shadow:0 6px 24px rgb(20 22 26/.15);flex:none}
+.wm{display:block;height:auto}
+.qr{display:block;width:100%;height:auto}
+.ph{background:var(--marker);color:var(--ink);padding:0 .15em;border-radius:2px}
+.ic{flex:none}
+@media print{body{background:none;padding:0}.toolbar,.label{display:none}.canvas{box-shadow:none;break-after:page;page-break-after:always}.ph{background:none}}
+
+.a4{width:210mm;height:297mm;background:var(--paper);padding:16mm 18mm 14mm;display:flex;flex-direction:column}
+.a4::before{content:"";position:absolute;left:0;top:0;right:0;height:3mm;background:var(--tuff-red)}
+.hd{display:flex;justify-content:space-between;align-items:center}
+.hd .wm{height:10mm;width:auto}
+.hd .k{font:600 8pt var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+.hero{margin-top:12mm;padding-bottom:10mm;border-bottom:.3mm solid rgb(107 102 94/.3)}
+.hero .k{font:600 8pt var(--font-text);letter-spacing:.14em;text-transform:uppercase;color:var(--tuff-red-ink)}
+.hero h1{font:800 34pt/1.0 var(--font-display);letter-spacing:-.02em;margin-top:3mm}
+.hero p{font:500 12pt/1.45 var(--font-text);margin-top:5mm;max-width:150mm}
+.hero p span{background:linear-gradient(transparent 60%,var(--marker) 60%,var(--marker) 92%,transparent 92%)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10mm 12mm;margin-top:10mm}
+.call{margin-top:10mm;background:var(--ink);color:var(--paper);border-radius:3mm;padding:7mm 8mm;display:flex;justify-content:space-between;align-items:center;gap:8mm}
+.call b{font:800 16pt/1.1 var(--font-display);display:block}
+.call p{font-size:10pt;opacity:.8;margin-top:1.5mm}
+.call span{font:700 9pt var(--font-text);background:var(--tuff-red);color:#fff;padding:3mm 5mm;border-radius:1.5mm;white-space:nowrap}
+.grid h3{font:800 13.5pt var(--font-display);margin-bottom:2.5mm}
+.grid p,.grid li{font-size:10.5pt;line-height:1.55}
+.grid ul{list-style:none;display:grid;gap:1.6mm}
+.grid li{display:flex;gap:2mm}
+.grid .ic{width:4mm;height:4mm;color:var(--pandan);margin-top:.6mm}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:2mm}
+.tier{border:.3mm solid rgb(107 102 94/.3);border-radius:2.5mm;padding:3mm;background:#fff}
+.tier.f{border-color:var(--tuff-red)}
+.tier b{font:800 13pt var(--font-display);display:block}
+.tier span{font-size:8pt;color:var(--stone)}
+.ft{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;padding-top:6mm;border-top:.3mm solid rgb(107 102 94/.3)}
+.ft ul{list-style:none;display:grid;gap:1.4mm;font:500 9pt var(--font-text)}
+.ft li{display:flex;gap:2mm;align-items:center}
+.ft .ic{width:3.8mm;height:3.8mm;color:var(--tuff-red-ink)}
+.ft .q{width:22mm;text-align:center;font:700 6.5pt var(--font-text);letter-spacing:.12em;text-transform:uppercase}
+.ft .q .qr{margin-bottom:1.5mm}
+.legal{font-size:7pt;color:var(--stone);margin-top:4mm}
+</style></head><body>
+<div class="toolbar"><span>A4 fact sheet and press kit cover. Highlighted fields are filled in before use.</span><button onclick="window.print()">Print</button></div>
+<div class="stage"><div class="canvas a4">
+<div class="hd"><img class="wm" src="../../assets/brand/logo/sgtuff-wordmark-primary.svg" alt="SGTUFF"><span class="k">Fact sheet · <span class="ph">[Month 2026]</span></span></div>
+<div class="hero"><p class="k">Singapore Tenants United for Fairness</p><h1>Small shops.<br>Strong voice.</h1><p><span>Representing over 1,000 frontline retail, F&amp;B, and service business owners across Singapore.</span></p></div>
+<div class="grid">
+<div><h3>Who we are</h3><p>SGTUFF Co-operative Ltd is a registered co-operative society. Business owners founded it in February 2020 to speak with one voice on rent and leases.</p></div>
+<div><h3>Fair tenancy</h3><p>SGTUFF Chairman Terence Yow serves on the Fair Tenancy Industry Committee. We push for fair, balanced lease terms between landlords and tenants.</p></div>
+<div><h3>What members get</h3><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Lease negotiation guidance</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Collective dispute mediation</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Industry bulletins and tenant welfare updates</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>A vote in how the co-op is run</span></li></ul></div>
+<div><h3>Leadership</h3><p><b>Terence Yow</b>, Chairman<br><b>Keson Lim</b>, COM</p><h3 style="margin-top:5mm">Membership</h3>
+<div class="tiers"><div class="tier"><b>$50</b><span>Basic · one-time</span></div><div class="tier f"><b>$199</b><span>Associate · per year</span></div><div class="tier"><b>$999</b><span>Patron · lifetime</span></div></div></div>
+</div>
+<div class="call"><div><b>Lease renewal coming up?</b><p>Send us your offer letter. We will benchmark it in 48 hours.</p></div><span>WhatsApp +65 8845 6623</span></div>
+<div class="ft"><div><ul><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@sgtuff.org.sg</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+65 8845 6623 (WhatsApp)</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>www.sgtuff.org.sg</li></ul>
+<p class="legal">Logos and photos for media: www.sgtuff.org.sg/brand · UEN <span class="ph">[UEN]</span></p></div>
+<div class="q"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" class="qr" shape-rendering="crispEdges"><path class="qrline" stroke="#14161a" d="M0 0.5h7m2 0h1m3 0h1m4 0h3m1 0h7m-29 1h1m5 0h1m1 0h2m1 0h5m2 0h1m1 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m2 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h2m2 0h5m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m5 0h1m6 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m2 0h2m1 0h3m2 0h4m1 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h3m1 0h7m-19 1h3m1 0h2m3 0h5m1 0h4m6 0h2m-27 1h1m2 0h2m3 0h1m1 0h5m1 0h6m1 0h2m2 0h1m-26 1h4m3 0h1m2 0h2m1 0h1m1 0h1m3 0h1m1 0h1m2 0h1m-25 1h3m2 0h2m1 0h1m1 0h1m2 0h1m3 0h1m2 0h1m1 0h1m2 0h1m-27 1h1m2 0h5m1 0h2m3 0h2m1 0h3m1 0h1m2 0h3m-25 1h2m1 0h2m3 0h2m1 0h1m2 0h2m2 0h2m1 0h2m1 0h1m-28 1h1m1 0h1m2 0h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h3m1 0h3m1 0h2m-29 1h2m2 0h1m4 0h1m3 0h4m2 0h4m1 0h2m1 0h2m-29 1h3m2 0h2m1 0h1m1 0h2m1 0h2m3 0h1m1 0h2m1 0h3m1 0h1m-24 1h1m2 0h1m1 0h1m4 0h1m6 0h1m1 0h1m2 0h1m-27 1h1m1 0h1m1 0h3m2 0h6m2 0h2m1 0h1m1 0h1m3 0h1m-25 1h2m1 0h1m4 0h1m3 0h6m1 0h3m1 0h2m1 0h1m-28 1h2m1 0h1m1 0h1m3 0h3m1 0h2m1 0h11m-20 1h2m1 0h2m3 0h5m3 0h2m1 0h2m-29 1h7m2 0h2m1 0h3m3 0h3m1 0h1m1 0h1m1 0h2m-28 1h1m5 0h1m1 0h1m2 0h2m1 0h1m5 0h1m3 0h1m2 0h2m-29 1h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m2 0h1m1 0h7m-27 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m3 0h1m1 0h1m4 0h2m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h1m2 0h1m4 0h3m1 0h1m2 0h1m2 0h1m1 0h1m-29 1h1m5 0h1m1 0h1m1 0h3m1 0h2m4 0h2m2 0h2m1 0h1m-28 1h7m5 0h1m3 0h1m1 0h6m1 0h1m1 0h1"/></svg>Join</div></div>
+</div></div>
+</body></html>
