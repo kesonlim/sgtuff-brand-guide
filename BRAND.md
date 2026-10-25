@@ -119,7 +119,7 @@ SGTUFF is the owner-run co-op that gives Singapore's independent shops and eater
 - **Purpose:** keep Singapore's neighbourhood shops and eateries alive and thriving.
 - **Positioning:** a movement with tools. Grassroots in who runs it, modern in how it works.
 - **Member baseline (use verbatim):** "Representing 700+ frontline business owners, 600+ brands and 2,600+ outlets across Singapore (as of Oct 2026)."
-- **Proof points:** owner-run since February 2020; a seat at the fair-tenancy table; shared services and lease help that save members real money.
+- **Proof points:** owner-run since February 2020 (registered as a co-operative on 7 Jan 2021; say so on formal documents); a seat at the fair-tenancy table; shared services and lease help that save members real money.
 - **What we are not:** a ministry, a law firm or a protest group.
 
 ### 3.2 Audiences
