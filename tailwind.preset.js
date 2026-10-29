@@ -13,6 +13,8 @@ module.exports = {
           marker: '#FFD43B',
           pandan: '#0E7C56',
           stone: '#6B665E',
+          'institute-navy': '#0F172A',
+          'institute-slate': '#1E293B',
         },
         // Semantic aliases for shadcn/ui-style tokens
         background: '#FAF7F2',

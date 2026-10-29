@@ -415,6 +415,29 @@ Nothing goes to print until the first list is ticked; the second list is the bui
 4. Run the member photo shoot.
 5. Produce the member card, decal and print items.
 
+## 11. Dual-Entity Architecture: `sgtuff.org.sg` (Co-op) vs. `sgtuff.org` (SGTUFF Institute)
+
+Locked 29 Oct 2026: SGTUFF operates through two parallel, legally distinct sister entities based in Singapore that share the optical **SGTUFF** wordmark, the **Unity U**, and the v2 typography system:
+
+| Dimension | `www.sgtuff.org.sg` (**SGTUFF Co-operative Ltd**) | `www.sgtuff.org` (**SGTUFF Institute Ltd.**) |
+| --- | --- | --- |
+| **Legal Entity** | Registered Co-operative Society (UEN `T21CS0006H`, Registry of Co-operative Societies, MCCY) | Public Company Limited by Guarantee (ACRA Non-Profit CLG; Stage 2 Charity registration under COC) |
+| **Primary Mandate** | Domestic Singapore tenant representation, co-operative shared services, WSQ training, and local industry dialogue | International policy research, open-source AI lease tools, global city benchmarking, and overseas capacity building |
+| **Primary Audience** | Singapore SME shopkeepers, landlords/REITs, MTI, MinLaw, FTIC, local trade associations & media | Overseas municipal governments, international chambers, global philanthropic foundations, and urban researchers |
+| **Primary Tagline** | **Tough together.** / **Small shops. Strong voice.** | **Fair rent is good business — globally.** / **The Singapore Fair Tenancy Model for the World.** |
+| **Surface Palette** | **Paper (`#FAF7F2`)** + **Ink (`#14161A`)** + **TUFF Red (`#E8352A`)** (Grassroots Modern) | **Diplomatic Navy (`#0F172A`)** & **Paper (`#FAF7F2`)** + **TUFF Red (`#E8352A`)** Unity U crest (Diplomatic Sister Palette) |
+| **Logo Lockup** | [`sgtuff-wordmark-primary.svg`](assets/brand/logo/sgtuff-wordmark-primary.svg) | [`sgtuff-institute-lockup.svg`](assets/brand/logo/sgtuff-institute-lockup.svg) / [`sgtuff-institute-night.svg`](assets/brand/logo/sgtuff-institute-night.svg) |
+
+### 11.1 Rules for the Dual-Entity System
+
+1. **Cross-Linking Banner:** Both `sgtuff.org.sg` and `sgtuff.org` must display a top switcher bar so Singapore shopkeepers and international grantmakers/policymakers immediately find the right portal.
+2. **Financial & Claims Separation:** Never mix Co-op membership dues (`$50 / $199 / $999`) with Institute philanthropic grants or donations. On `sgtuff.org`, state clearly: *"SGTUFF Institute Ltd. is a Singapore-headquartered non-profit Public Company Limited by Guarantee, established to share empirical learnings and open-source tools from Singapore's fair tenancy movement (`SGTUFF Co-operative Limited`, UEN T21CS0006H)."*
+3. **Four Global Pillars on `sgtuff.org`:**
+   - **Pillar 1:** *The Singapore Fair Tenancy Blueprint* (Policy & Legislative Advisory)
+   - **Pillar 2:** *Open-Source AI Fair-Lease & Benchmark Lab* (Tech-for-Good)
+   - **Pillar 3:** *Global Urban Retail & SME Tenancy Index* (Empirical Research)
+   - **Pillar 4:** *Global Fair Tenancy Fellowship & Academy* (Capacity Building)
+
 ## Sources
 
 - [SNCF: New co-op aims to bridge tenant-landlord relationships](https://www.sncf.coop/newsletters/new-co-op-aims-to-bridge-tenant-landlord-relationships)

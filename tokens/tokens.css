@@ -9,6 +9,8 @@
   --pandan: #0E7C56;        /* Positive data, success states */
   --stone: #6B665E;         /* Secondary text, captions, borders */
   --white: #FFFFFF;
+  --institute-navy: #0F172A;  /* SGTUFF Institute (.org) diplomatic dark canvas & headers */
+  --institute-slate: #1E293B; /* SGTUFF Institute (.org) secondary surface & borders */
 
   /* Type */
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
