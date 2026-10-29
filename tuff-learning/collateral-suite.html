@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUFF Learning Pte Ltd — Executive Collateral, CCLP Certificate & Stationery Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b12;
+      --surface: #0f172a;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #f59e0b;
+      --crimson: #c81e1e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding-bottom: 80px;
+    }
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 11, 18, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+    .top-nav-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .nav-brand-badge {
+      background: #eb2315;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+    .nav-link.active {
+      color: #fff;
+      background: rgba(217, 119, 6, 0.15);
+      border-color: rgba(217, 119, 6, 0.4);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+    }
+
+    .section-block {
+      margin-bottom: 64px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* 1. CCLP ACCREDITED CERTIFICATE MOCKUP */
+    .cert-frame {
+      background: #fffdf9;
+      color: #0f172a;
+      border: 12px solid #0f172a;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .cert-inner {
+      border: 2px solid #d97706;
+      padding: 48px 56px;
+      position: relative;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(217,119,6,0.04) 0%, transparent 70%);
+    }
+    .cert-header-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .cert-tuff-box {
+      background: #c81e1e;
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .cert-learn-word {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: #0f172a;
+      letter-spacing: 0.06em;
+    }
+    .cert-subtitle {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #b45309;
+      margin-bottom: 24px;
+    }
+    .cert-title {
+      font-family: 'Cinzel', serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .cert-recipient {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #b45309;
+      border-bottom: 2px solid #cbd5e1;
+      display: inline-block;
+      padding: 0 40px 6px;
+      margin: 14px 0 18px;
+    }
+    .cert-body-text {
+      font-size: 14px;
+      color: #334155;
+      max-width: 680px;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+    .cert-footer {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .cert-sig {
+      border-top: 1px solid #94a3b8;
+      padding-top: 8px;
+      font-size: 12px;
+    }
+    .cert-seal {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      border: 3px double #fff;
+      box-shadow: 0 4px 15px rgba(180, 83, 9, 0.35);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    /* 2. BUSINESS CARDS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 32px;
+    }
+    .bcard {
+      aspect-ratio: 1.75 / 1;
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+    }
+    .bcard-front {
+      background: linear-gradient(135deg, #0f172a 0%, #070b12 100%);
+      border: 1px solid #334155;
+    }
+    .bcard-front::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #eb2315, #d97706);
+    }
+    .bcard-back {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* 3. LEASE AUDIT REPORT LETTERHEAD */
+    .letterhead-sheet {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 12px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 56px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      border-top: 8px solid #c81e1e;
+    }
+    .lh-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #0f172a;
+      margin-bottom: 28px;
+    }
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 12.5px;
+    }
+    .audit-table th {
+      background: #0f172a;
+      color: #fff;
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .audit-table td {
+      padding: 12px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .badge-red {
+      background: #fee2e2;
+      color: #991b1b;
+      font-weight: 800;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .badge-amber {
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 800;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* 4. EMAIL SIGNATURE */
+    .sig-preview-box {
+      background: #ffffff;
+      color: #0f172a;
+      padding: 32px;
+      border-radius: 14px;
+      max-width: 680px;
+    }
+    .btn-copy {
+      margin-top: 16px;
+      background: #f59e0b;
+      color: #090d16;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-badge">TUFF</span>
+        <span>LEARNING PTE LTD — Brand & Platform Suite</span>
+      </a>
+      <div class="nav-links">
+        <a href="brand-directions-showcase.html" class="nav-link">1. 3-Direction Brand Guides</a>
+        <a href="collateral-suite.html" class="nav-link active">2. Collateral & Certificates</a>
+        <a href="financial-plan-deck.html" class="nav-link">3. Strategy, P&L & Cashflow</a>
+        <a href="index.html" class="nav-link">4. Main Website (`tufflearning.com`)</a>
+        <a href="avatar-tenants.html" class="nav-link">Avatar: Tenants</a>
+        <a href="avatar-landlords.html" class="nav-link">Avatar: Landlords</a>
+        <a href="avatar-agents.html" class="nav-link">Avatar: Agents</a>
+        <a href="../index.html" class="nav-link" style="border-color:#334155;">← SGTUFF Hub</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- 1. CCLP ACCREDITED CERTIFICATE -->
+    <section class="section-block">
+      <div class="section-title">01. Official Industry Accreditation Certificate (Revenue Engine #5: CCLP Credential)</div>
+      <p class="section-desc">Issued upon completion of the <strong>Certified Commercial Leasing Practitioner (CCLP)</strong> assessment ($380 certification + $150/yr directory renewal). Includes verifiable credential ID and LinkedIn badge compatibility.</p>
+
+      <div class="cert-frame">
+        <div class="cert-inner">
+          <div class="cert-header-lockup">
+            <span class="cert-tuff-box">TUFF</span>
+            <span class="cert-learn-word">LEARNING</span>
+          </div>
+          <div class="cert-subtitle">Singapore Institute of Commercial Leasing & Tenancy Law</div>
+          <div style="font-size:13px; color:#64748b; text-transform:uppercase; letter-spacing:0.15em;">This Executive Credential Certifies That</div>
+          <div class="cert-recipient">ALEXANDER TAN WEI MING</div>
+          <div class="cert-body-text">
+            Has successfully completed the prescribed executive curriculum, commercial lease redlining practicum, and statutory examination under the <strong>Singapore Fair Tenancy Framework (FTIC Code of Conduct)</strong>, and is hereby conferred the professional designation of:
+          </div>
+          <div class="cert-title">CERTIFIED COMMERCIAL LEASING PRACTITIONER (CCLP™)</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#64748b; margin-bottom:24px;">
+            CREDENTIAL ID: TL-CCLP-2027-08492 • VERIFY AT: TUFFLEARNING.COM/VERIFY
+          </div>
+
+          <div class="cert-footer">
+            <div class="cert-sig">
+              <div style="font-family:'Cinzel',serif; font-weight:700; font-size:14px; color:#0f172a;">Keson Lim</div>
+              <div style="color:#64748b; font-size:11px;">Chairman & Managing Director, TUFF Learning Pte Ltd</div>
+            </div>
+            <div class="cert-seal">
+              <span>TUFF</span>
+              <span style="font-size:8px; color:#fef3c7;">ACCREDITED</span>
+              <span>CCLP™</span>
+            </div>
+            <div class="cert-sig">
+              <div style="font-family:'Cinzel',serif; font-weight:700; font-size:14px; color:#0f172a;">Academic & Legal Board</div>
+              <div style="color:#64748b; font-size:11px;">Commercial Leasing Faculty, Singapore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. EXECUTIVE BUSINESS CARDS -->
+    <section class="section-block">
+      <div class="section-title">02. Executive Dual-Sided Business Cards (90mm × 54mm Print Standard)</div>
+      <p class="section-desc">Designed for TUFF Learning leadership, faculty trainers, and corporate leasing advisors.</p>
+
+      <div class="cards-grid">
+        <!-- Front -->
+        <div class="bcard bcard-front">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <span style="background:#eb2315; color:#fff; font-weight:900; font-size:15px; padding:3px 9px; border-radius:4px;">TUFF</span>
+                <span style="font-family:'Cinzel',serif; font-weight:700; font-size:17px; color:#fff;">LEARNING</span>
+              </div>
+              <div style="font-size:9px; color:#f59e0b; letter-spacing:0.16em; text-transform:uppercase; font-weight:700; margin-top:4px;">Commercial Leasing & Legal Institute</div>
+            </div>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#94a3b8;">tufflearning.com</span>
+          </div>
+
+          <div>
+            <div style="font-size:20px; font-weight:800; color:#fff;">Keson Lim</div>
+            <div style="font-size:12px; color:#f59e0b; font-weight:700; margin-bottom:12px;">Chairman & Principal Faculty</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; font-size:11px; color:#cbd5e1; border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
+              <div><strong>E:</strong> keson@tufflearning.com</div>
+              <div><strong>W:</strong> www.tufflearning.com</div>
+              <div><strong>T:</strong> +65 9781 0661</div>
+              <div><strong>E:</strong> TUFF Learning Pte Ltd</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back -->
+        <div class="bcard bcard-back">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #0f172a; padding-bottom:12px;">
+            <span style="font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#c81e1e;">Executive Practice Areas</span>
+            <span style="font-size:11px; font-weight:800; color:#0f172a;">Singapore</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:11.5px; font-weight:700; color:#1e293b;">
+            <div style="background:#f1f5f9; padding:8px 10px; border-radius:6px; border-left:3px solid #c81e1e;">01. Executive Leasing Masterclasses</div>
+            <div style="background:#f1f5f9; padding:8px 10px; border-radius:6px; border-left:3px solid #d97706;">02. 48-Hr Fixed-Fee Lease Audits</div>
+            <div style="background:#f1f5f9; padding:8px 10px; border-radius:6px; border-left:3px solid #0f172a;">03. AI Lease Clause Risk Portal</div>
+            <div style="background:#f1f5f9; padding:8px 10px; border-radius:6px; border-left:3px solid #0d9488;">04. REIT & Agent CCLP Accreditation</div>
+          </div>
+          <div style="font-size:10.5px; color:#64748b; display:flex; justify-content:space-between;">
+            <span>Clarity • Reciprocity • Commercial Mastery</span>
+            <strong style="color:#0f172a;">Scan for Course Catalog →</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. LEASE AUDIT REPORT LETTERHEAD -->
+    <section class="section-block">
+      <div class="section-title">03. Official Corporate Letterhead & 48-Hour Lease Audit Deliverable (Revenue Engine #1)</div>
+      <p class="section-desc">Sample deliverable issued to clients who purchase the <strong>$480 LOO Rapid Audit</strong> or <strong>$1,280 Full TA Deep Audit Clinic</strong>.</p>
+
+      <div class="letterhead-sheet">
+        <div class="lh-header">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:#eb2315; color:#fff; font-weight:900; font-size:16px; padding:3px 10px; border-radius:4px;">TUFF</span>
+              <span style="font-family:'Cinzel',serif; font-weight:800; font-size:18px; color:#0f172a;">LEARNING PTE LTD</span>
+            </div>
+            <div style="font-size:10px; font-weight:700; color:#b45309; letter-spacing:0.14em; text-transform:uppercase; margin-top:4px;">
+              Commercial Lease Audit Clinic & FTIC Compliance Practice
+            </div>
+          </div>
+          <div style="text-align:right; font-size:11px; color:#475569; font-family:'JetBrains Mono',monospace;">
+            <div><strong>AUDIT REF:</strong> TL-CLINIC-2027-0194</div>
+            <div><strong>TURNAROUND:</strong> 36 HOURS (EXPRESS)</div>
+            <div><strong>PORTAL:</strong> tufflearning.com/clinic</div>
+          </div>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:14px 18px; margin-bottom:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12px;">
+          <div><strong>Client Entity:</strong> Artisan Bistro Group Pte Ltd (3 Outlets)</div>
+          <div><strong>Premises:</strong> Suburban Regional Mall, #01-42 (1,450 sq ft)</div>
+          <div><strong>Overall Risk Score:</strong> <span class="badge-red">HIGH RISK (3 LETHAL CLAUSES DETECTED)</span></div>
+        </div>
+
+        <h4 style="font-size:14px; font-weight:800; text-transform:uppercase; letter-spacing:0.05em; color:#0f172a; margin-bottom:8px;">
+          Executive Redline Summary & Recommended Counter-Wording
+        </h4>
+
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th style="width:16%;">Clause Ref</th>
+              <th style="width:16%;">Severity</th>
+              <th style="width:32%;">Landlord Draft Trap</th>
+              <th style="width:36%;">TUFF Learning Recommended Rider Wording</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-family:'JetBrains Mono',monospace; font-weight:700;">LOO Item 11.4<br>(Reinstatement)</td>
+              <td><span class="badge-red">CRITICAL RED FLAG</span></td>
+              <td>Requires tenant to demolish incoming kitchen exhaust & floor screed installed by previous tenant at exit (Est. $85,000 liability).</td>
+              <td><strong>Insert Rider 11.4A:</strong> <em>"Tenant's reinstatement obligation shall strictly exclude pre-existing handover fixtures documented in Schedule B Handover Condition Report."</em></td>
+            </tr>
+            <tr>
+              <td style="font-family:'JetBrains Mono',monospace; font-weight:700;">LOO Item 6.2<br>(Service Charge)</td>
+              <td><span class="badge-amber">FTIC DEVIATION</span></td>
+              <td>Permits unilateral Service Charge & Chilled Water increases at Landlord's sole discretion during the 3-year term.</td>
+              <td><strong>Insert Rider 6.2B:</strong> Cap aggregate service charge adjustment at max 5% across the lease term in alignment with FTIC transparency principles.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:24px; padding-top:16px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; font-size:11px; color:#64748b;">
+          <span>Prepared by TUFF Learning Commercial Leasing Advisory Panel</span>
+          <span>www.tufflearning.com • Confidential Commercial Audit</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HTML EMAIL SIGNATURE -->
+    <section class="section-block">
+      <div class="section-title">04. Executive HTML Email Signature</div>
+      <p class="section-desc">Standardized signature for Gmail / Outlook across TUFF Learning Pte Ltd faculty and advisory staff.</p>
+
+      <div class="sig-preview-box" id="sig-content">
+        <table cellpadding="0" cellspacing="0" style="font-family:'Plus Jakarta Sans',Arial,sans-serif; color:#0f172a; font-size:13px;">
+          <tr>
+            <td style="padding-right:18px; border-right:3px solid #eb2315; vertical-align:top;">
+              <div style="background:#eb2315; color:#fff; font-weight:900; font-size:15px; padding:4px 10px; border-radius:4px; display:inline-block; letter-spacing:0.04em;">TUFF</div>
+              <div style="font-weight:800; font-size:12px; color:#0f172a; margin-top:4px; letter-spacing:0.06em;">LEARNING</div>
+            </td>
+            <td style="padding-left:18px; vertical-align:top;">
+              <div style="font-weight:800; font-size:15px; color:#0f172a;">Keson Lim</div>
+              <div style="font-weight:700; font-size:12px; color:#d97706; margin-bottom:8px;">Chairman & Managing Director • TUFF Learning Pte Ltd</div>
+              <div style="font-size:12px; color:#475569; line-height:1.6;">
+                <strong>Web:</strong> <a href="https://tufflearning.com" style="color:#c81e1e; text-decoration:none; font-weight:700;">www.tufflearning.com</a> &nbsp;|&nbsp;
+                <strong>Email:</strong> keson@tufflearning.com<br>
+                <span style="font-size:11px; color:#64748b;">Executive Leasing Courses • 48-Hr Lease Audit Clinics • AI Clause Intelligence</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button class="btn-copy" onclick="navigator.clipboard.writeText(document.getElementById('sig-content').innerHTML); this.textContent='✓ Copied HTML Signature!';">Copy HTML Email Signature</button>
+    </section>
+  </div>
+
+</body>
+</html>

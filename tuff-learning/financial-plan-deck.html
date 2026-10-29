@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUFF Learning Pte Ltd — Executive Strategy, Pricing, 3-Year P&L & Cashflow Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b12;
+      --surface: #0f172a;
+      --surface-2: #111827;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --gold: #f59e0b;
+      --crimson: #eb2315;
+      --emerald: #10b981;
+      --teal: #14b8a6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding-bottom: 80px;
+    }
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 11, 18, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+    .top-nav-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .nav-brand-badge {
+      background: var(--crimson);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+    .nav-link.active {
+      color: #fff;
+      background: rgba(217, 119, 6, 0.15);
+      border-color: rgba(217, 119, 6, 0.4);
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+    }
+
+    /* Executive Hero */
+    .exec-hero {
+      background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px 40px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .exec-hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #eb2315, #f59e0b, #10b981);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .kpi-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .kpi-sub {
+      font-size: 11.5px;
+      color: var(--emerald);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Section Styling */
+    .section-block {
+      margin-bottom: 56px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Interactive Simulator */
+    .sim-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    @media (max-width: 980px) {
+      .sim-grid { grid-template-columns: 1fr; }
+    }
+    .slider-group {
+      margin-bottom: 18px;
+    }
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .slider-val {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--gold);
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: #f59e0b;
+      cursor: pointer;
+    }
+    .sim-output {
+      background: #090d16;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sim-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 13.5px;
+    }
+    .sim-row strong {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* 6 Revenue Streams Grid */
+    .rev-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1060px) {
+      .rev-grid { grid-template-columns: 1fr; }
+    }
+    .rev-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .rev-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .margin-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.14);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    /* Financial Tables */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    table.fin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      min-width: 980px;
+    }
+    table.fin-table th {
+      background: #090d16;
+      color: #cbd5e1;
+      font-weight: 800;
+      text-align: right;
+      padding: 12px 10px;
+      border-bottom: 2px solid #334155;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+    table.fin-table th:first-child {
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    table.fin-table td {
+      padding: 10px;
+      text-align: right;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    table.fin-table td:first-child {
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+    tr.row-highlight {
+      background: rgba(245, 158, 11, 0.08);
+      font-weight: 800;
+      color: #fff;
+    }
+    tr.row-highlight td {
+      border-top: 1px solid rgba(245, 158, 11, 0.35);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+    }
+    tr.row-green {
+      background: rgba(16, 185, 129, 0.1);
+    }
+    tr.row-green td {
+      color: #34d399;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-badge">TUFF</span>
+        <span>LEARNING PTE LTD — Brand & Platform Suite</span>
+      </a>
+      <div class="nav-links">
+        <a href="brand-directions-showcase.html" class="nav-link">1. 3-Direction Brand Guides</a>
+        <a href="collateral-suite.html" class="nav-link">2. Collateral & Certificates</a>
+        <a href="financial-plan-deck.html" class="nav-link active">3. Strategy, P&L & Cashflow</a>
+        <a href="index.html" class="nav-link">4. Main Website (`tufflearning.com`)</a>
+        <a href="avatar-tenants.html" class="nav-link">Avatar: Tenants</a>
+        <a href="avatar-landlords.html" class="nav-link">Avatar: Landlords</a>
+        <a href="avatar-agents.html" class="nav-link">Avatar: Agents</a>
+        <a href="../index.html" class="nav-link" style="border-color:#334155;">← SGTUFF Hub</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero KPI Overview -->
+    <div class="exec-hero">
+      <div style="font-size:11px; font-weight:800; color:#f59e0b; text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px;">
+        ★ Commercial Blueprint • 100% Digital & Hybrid Cohort Model
+      </div>
+      <h1 style="font-size:34px; font-weight:800; letter-spacing:-0.02em; margin-bottom:10px;">
+        TUFF Learning Pte Ltd — Positioning, Revenue Engines, 3-Year P&L & Cashflow Forecast
+      </h1>
+      <p style="font-size:15px; color:var(--text-muted); max-width:920px;">
+        Built on an asset-light, high-margin operating structure with <strong>zero fixed venue rent in Q1–Q2</strong>, upfront Stripe/PayNow fee collection, practitioner revenue-sharing, and six synergistic B2B profit streams alongside flagship leasing courses.
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Initial Seed Capital</div>
+          <div class="kpi-val">S$35,000</div>
+          <div class="kpi-sub">✓ Full Payback by Month 4</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Year 1 Gross Revenue</div>
+          <div class="kpi-val">S$485,000</div>
+          <div class="kpi-sub">✓ S$230,100 Net Profit (NPAT)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Year 2 Gross Revenue</div>
+          <div class="kpi-val">S$1,230,000</div>
+          <div class="kpi-sub">✓ WSQ/ATO + CEA CPD Scale</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Year 3 Gross Revenue</div>
+          <div class="kpi-val">S$2,200,000</div>
+          <div class="kpi-sub">✓ S$990,000 Net Profit (45% Net)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Blended Gross Margin</div>
+          <div class="kpi-val">72% – 74%</div>
+          <div class="kpi-sub">✓ High-Margin SaaS + Clinics</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE P&L & CASHFLOW SIMULATOR -->
+    <section class="section-block">
+      <div class="section-title">01. Interactive Annual Revenue & Profit Simulator</div>
+      <p class="section-desc">Adjust monthly student enrollment, fixed-fee lease audit clinics, AI lease scans, and corporate advisory retainers to stress-test annual revenue and net profit.</p>
+
+      <div class="sim-grid">
+        <div>
+          <div class="slider-group">
+            <div class="slider-header">
+              <span>1. Monthly Course Trainees (Blended Avg S$580/pax across Tracks 1–3)</span>
+              <span class="slider-val" id="lbl-students">36 pax / mo</span>
+            </div>
+            <input type="range" id="in-students" min="10" max="150" value="36" oninput="updateSim()">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span>2. Monthly Fixed-Fee Lease Audit Clinics (Blended Avg S$720/audit)</span>
+              <span class="slider-val" id="lbl-audits">10 audits / mo</span>
+            </div>
+            <input type="range" id="in-audits" min="2" max="50" value="10" oninput="updateSim()">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span>3. Monthly AI Lease Scans & Digital Toolkits (Avg S$150/order)</span>
+              <span class="slider-val" id="lbl-saas">30 orders / mo</span>
+            </div>
+            <input type="range" id="in-saas" min="10" max="200" value="30" oninput="updateSim()">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span>4. Monthly Corporate Advisory / In-House Workshops (Avg S$6,000)</span>
+              <span class="slider-val" id="lbl-corp">1.0 engagement / mo</span>
+            </div>
+            <input type="range" id="in-corp" min="0" max="8" step="0.5" value="1" oninput="updateSim()">
+          </div>
+
+          <div class="slider-group" style="margin-bottom:0;">
+            <div class="slider-header">
+              <span>5. Monthly CCLP Accreditations & Benchmark Reports (Avg S$400)</span>
+              <span class="slider-val" id="lbl-cert">5 certs / mo</span>
+            </div>
+            <input type="range" id="in-cert" min="0" max="40" value="5" oninput="updateSim()">
+          </div>
+        </div>
+
+        <div class="sim-output">
+          <div>
+            <div style="font-size:11px; font-weight:800; color:#f59e0b; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">
+              Simulated Annual P&L Output (SGD)
+            </div>
+            <div class="sim-row">
+              <span>Annual Course Tuition Revenue:</span>
+              <strong id="out-rev-course">S$250,560</strong>
+            </div>
+            <div class="sim-row">
+              <span>Annual Non-Course Services & SaaS Revenue:</span>
+              <strong id="out-rev-services" style="color:#38bdf8;">S$234,000</strong>
+            </div>
+            <div class="sim-row" style="border-top:1px solid #334155; font-size:15px; color:#fff;">
+              <span><strong>Total Projected Annual Revenue:</strong></span>
+              <strong id="out-rev-total" style="color:#f59e0b; font-size:17px;">S$484,560</strong>
+            </div>
+            <div class="sim-row">
+              <span>Less: Direct COGS (28% Trainer Share, Gateway, AI):</span>
+              <strong id="out-cogs" style="color:#f87171;">(S$135,677)</strong>
+            </div>
+            <div class="sim-row">
+              <span>Less: Lean Digital Operating Expenses (OPEX):</span>
+              <strong id="out-opex" style="color:#f87171;">(S$94,600)</strong>
+            </div>
+          </div>
+
+          <div style="background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.35); border-radius:12px; padding:16px; margin-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:11px; font-weight:800; text-transform:uppercase; color:#34d399;">Projected Annual EBITDA (Pre-Tax Profit)</div>
+              <div style="font-size:12px; color:#cbd5e1;" id="out-margin">Operating Margin: 52.5%</div>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:800; color:#34d399;" id="out-ebitda">
+              S$254,283
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIX ADDITIONAL REVENUE & PROFIT ENGINES -->
+    <section class="section-block">
+      <div class="section-title">02. Six Additional High-Margin Revenue & Profit Engines (Beyond Courses)</div>
+      <p class="section-desc">How TUFF Learning Pte Ltd monetizes commercial tenants, landlords, and agents before, during, and after classroom training.</p>
+
+      <div class="rev-grid">
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#f59e0b;">ENGINE 01 • HIGH DEMAND</span>
+              <span class="margin-pill">80% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">48-Hour Fixed-Fee Lease Audit & Red-Flag Clinics</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              SMEs hate paying law firms $4,500+ with slow turnaround. We audit any Letter of Offer (LOO) or Tenancy Agreement (TA) in 48 hours against the FTIC Code of Conduct with exact counter-proposal riders.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Tier 1 LOO Audit: <strong style="color:#f59e0b;">S$480 flat</strong><br>
+            • Tier 2 Full TA + Call: <strong style="color:#f59e0b;">S$1,280 flat</strong>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#2dd4bf;">ENGINE 02 • SCALABLE SAAS</span>
+              <span class="margin-pill">92% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">AI Lease Intelligence & Clause Benchmark Scanner</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              Self-service portal on <code>tufflearning.com</code> where users upload a PDF LOO/TA to receive an instant 90-second Red/Amber/Green clause risk score and psf rental comparison.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Single Document Scan: <strong style="color:#2dd4bf;">S$99 / scan</strong><br>
+            • Pro Agent / Chain Pass: <strong style="color:#2dd4bf;">S$490 / year</strong>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#f87171;">ENGINE 03 • HIGH TICKET B2B</span>
+              <span class="margin-pill">75% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">Corporate Lease Renewal & Restructuring Retainers</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              Done-for-you commercial negotiation strategy, rental benchmark modeling, capex/reinstatement settlement, and SMC mediation prep for multi-outlet chains.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Single Outlet Pack: <strong style="color:#f87171;">S$3,500</strong><br>
+            • Multi-Outlet Portfolio: <strong style="color:#f87171;">S$6,500 – S$8,500</strong>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#38bdf8;">ENGINE 04 • PASSIVE DIGITAL</span>
+              <span class="margin-pill">98% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">Digital Playbooks, Rider Libraries & GTO Calculators</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              Instant-download commercial lease clause vaults, 45+ protective tenant rider templates, handover inspection checklists, and Excel GTO rent viability calculators.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Clause Playbook: <strong style="color:#38bdf8;">S$199</strong><br>
+            • Full Expansion Vault: <strong style="color:#38bdf8;">S$499</strong>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#f59e0b;">ENGINE 05 • RECURRING CREDENTIAL</span>
+              <span class="margin-pill">90% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">Certified Commercial Leasing Practitioner (CCLP™)</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              Professional exam, digital LinkedIn credential, and public verified practitioner directory listing for commercial real estate agents and corporate leasing managers.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Exam & Credential: <strong style="color:#f59e0b;">S$380</strong><br>
+            • Annual Directory Renewal: <strong style="color:#f59e0b;">S$150 / yr</strong>
+          </div>
+        </div>
+
+        <div class="rev-card">
+          <div>
+            <div class="rev-badge-row">
+              <span style="font-size:11px; font-weight:800; color:#a78bfa;">ENGINE 06 • DATA & SPONSORSHIP</span>
+              <span class="margin-pill">85% Gross Margin</span>
+            </div>
+            <h3 style="font-size:17px; font-weight:800; margin-bottom:8px;">Annual Singapore Commercial Rental Benchmark Reports</h3>
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+              Sector-by-sector psf rent, service charge, and GTO benchmark reports across Orchard, CBD, Suburban Malls & Shophouses, plus sponsored executive roundtables.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#fff;">
+            • Corporate Report: <strong style="color:#a78bfa;">S$580 / copy</strong><br>
+            • B2B Event Sponsorship: <strong style="color:#a78bfa;">S$5,000 – S$10,000</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12-MONTH YEAR 1 MONTHLY CASHFLOW TABLE -->
+    <section class="section-block">
+      <div class="section-title">03. Month-by-Month Year 1 Cashflow Forecast (SGD)</div>
+      <p class="section-desc">Starting with S$35,000 working capital in Month 1, TUFF Learning turns cashflow positive in Month 2 (+S$8,005) and finishes Year 1 with S$282,900 pre-tax cash (S$258,400 post-tax).</p>
+
+      <div class="table-wrap">
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>Cashflow Line Item (SGD)</th>
+              <th>M1</th>
+              <th>M2</th>
+              <th>M3</th>
+              <th>M4</th>
+              <th>M5</th>
+              <th>M6</th>
+              <th>M7</th>
+              <th>M8</th>
+              <th>M9</th>
+              <th>M10</th>
+              <th>M11</th>
+              <th>M12</th>
+              <th>Year 1 Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Cohort Courses (Tracks 1–3)</td>
+              <td>6,800</td><td>12,400</td><td>15,600</td><td>18,200</td><td>20,400</td><td>22,000</td><td>24,000</td><td>25,200</td><td>26,800</td><td>25,600</td><td>27,400</td><td>24,000</td><td>248,400</td>
+            </tr>
+            <tr>
+              <td>2. Lease Audit Clinics ($480/$1,280)</td>
+              <td>1,920</td><td>3,840</td><td>5,280</td><td>6,240</td><td>7,200</td><td>7,680</td><td>8,640</td><td>9,120</td><td>9,600</td><td>9,120</td><td>9,600</td><td>8,160</td><td>86,400</td>
+            </tr>
+            <tr>
+              <td>3. AI Lease Scanner & Digital Toolkits</td>
+              <td>1,200</td><td>2,100</td><td>3,200</td><td>3,800</td><td>4,400</td><td>4,900</td><td>5,200</td><td>5,600</td><td>6,000</td><td>5,800</td><td>6,200</td><td>5,800</td><td>54,200</td>
+            </tr>
+            <tr>
+              <td>4. Corporate Advisory Retainers</td>
+              <td>0</td><td>0</td><td>3,500</td><td>3,500</td><td>7,000</td><td>7,000</td><td>7,000</td><td>8,500</td><td>8,500</td><td>8,500</td><td>10,000</td><td>8,500</td><td>72,000</td>
+            </tr>
+            <tr>
+              <td>5. CCLP Certs & Benchmark Reports</td>
+              <td>0</td><td>0</td><td>0</td><td>1,900</td><td>1,900</td><td>2,280</td><td>2,660</td><td>3,040</td><td>3,420</td><td>3,040</td><td>3,040</td><td>2,720</td><td>24,000</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Total Monthly Cash Receipts</td>
+              <td>9,920</td><td>18,340</td><td>27,580</td><td>33,640</td><td>40,900</td><td>43,860</td><td>47,500</td><td>51,460</td><td>54,320</td><td>52,060</td><td>56,240</td><td>49,180</td><td>485,000</td>
+            </tr>
+            <tr>
+              <td>Less: Direct COGS (28% Blended)</td>
+              <td>(2,778)</td><td>(5,135)</td><td>(7,722)</td><td>(9,419)</td><td>(11,452)</td><td>(12,281)</td><td>(13,300)</td><td>(14,409)</td><td>(15,210)</td><td>(14,577)</td><td>(15,747)</td><td>(13,770)</td><td>(135,800)</td>
+            </tr>
+            <tr>
+              <td>Gross Profit</td>
+              <td>7,142</td><td>13,205</td><td>19,858</td><td>24,221</td><td>29,448</td><td>31,579</td><td>34,200</td><td>37,051</td><td>39,110</td><td>37,483</td><td>40,493</td><td>35,410</td><td>349,200</td>
+            </tr>
+            <tr>
+              <td>Less: Monthly Operating Expenses (OPEX)</td>
+              <td>(7,200)</td><td>(5,200)</td><td>(5,200)</td><td>(6,100)</td><td>(6,100)</td><td>(7,700)</td><td>(9,200)</td><td>(9,700)</td><td>(9,700)</td><td>(9,700)</td><td>(9,700)</td><td>(9,100)</td><td>(94,600)</td>
+            </tr>
+            <tr>
+              <td>Less: Platform & AI Setup CapEx</td>
+              <td>(6,700)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>(6,700)</td>
+            </tr>
+            <tr class="row-green">
+              <td>Net Monthly Cashflow</td>
+              <td>(6,758)</td><td>+8,005</td><td>+14,658</td><td>+18,121</td><td>+23,348</td><td>+23,879</td><td>+25,000</td><td>+27,351</td><td>+29,410</td><td>+27,783</td><td>+30,793</td><td>+26,310</td><td>+247,900</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Closing Cash Balance (incl. $35k Seed)</td>
+              <td>28,242</td><td>36,247</td><td>50,905</td><td>69,026</td><td>92,374</td><td>116,253</td><td>141,253</td><td>168,604</td><td>198,014</td><td>225,797</td><td>256,590</td><td>282,900</td><td>282,900</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3-YEAR P&L SUMMARY -->
+    <section class="section-block">
+      <div class="section-title">04. 3-Year Profit & Loss (P&L) Projection (Year 1 – Year 3)</div>
+      <p class="section-desc">Reflects Phase 1 Commercial Launch in Year 1, followed by Phase 2 SkillsFuture/WSQ (via ATO) + CEA CPD volume expansion in Years 2 and 3.</p>
+
+      <div class="table-wrap">
+        <table class="fin-table" style="min-width:720px;">
+          <thead>
+            <tr>
+              <th>P&L Statement Line Item (SGD)</th>
+              <th>Year 1 (Launch)</th>
+              <th>Year 2 (WSQ + CPD Scale)</th>
+              <th>Year 3 (Market Leader)</th>
+              <th>3-Year Cumulative</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Flagship Courses & Corporate Workshops</td>
+              <td>S$248,400</td><td>S$612,000</td><td>S$1,080,000</td><td>S$1,940,400</td>
+            </tr>
+            <tr>
+              <td>2. Fixed-Fee Lease Audit Clinics ($480 / $1,280)</td>
+              <td>S$86,400</td><td>S$192,000</td><td>S$312,000</td><td>S$590,400</td>
+            </tr>
+            <tr>
+              <td>3. AI Lease Scanner SaaS & Digital Toolkits</td>
+              <td>S$54,200</td><td>S$168,000</td><td>S$340,000</td><td>S$562,200</td>
+            </tr>
+            <tr>
+              <td>4. Corporate Renewal & Restructuring Retainers</td>
+              <td>S$72,000</td><td>S$180,000</td><td>S$320,000</td><td>S$572,000</td>
+            </tr>
+            <tr>
+              <td>5. CCLP Certifications & Benchmark Reports</td>
+              <td>S$24,000</td><td>S$78,000</td><td>S$148,000</td><td>S$250,000</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Total Gross Revenue</td>
+              <td>S$485,000</td><td>S$1,230,000</td><td>S$2,200,000</td><td>S$3,915,000</td>
+            </tr>
+            <tr>
+              <td>Less: Total Direct COGS (Faculty Share, AI, Venues)</td>
+              <td>(S$135,800)</td><td>(S$332,100)</td><td>(S$572,000)</td><td>(S$1,039,900)</td>
+            </tr>
+            <tr>
+              <td>Gross Profit (72% – 74% Margin)</td>
+              <td>S$349,200</td><td>S$897,900</td><td>S$1,628,000</td><td>S$2,875,100</td>
+            </tr>
+            <tr>
+              <td>Less: Total Operating Expenses (Marketing, Team, Cloud)</td>
+              <td>(S$94,600)</td><td>(S$268,000)</td><td>(S$462,000)</td><td>(S$824,600)</td>
+            </tr>
+            <tr class="row-green">
+              <td>EBITDA / Operating Profit</td>
+              <td>S$254,600</td><td>S$629,900</td><td>S$1,166,000</td><td>S$2,050,500</td>
+            </tr>
+            <tr>
+              <td>Less: Estimated Singapore Corporate Tax (w/ SUTE)</td>
+              <td>(S$24,500)</td><td>(S$86,500)</td><td>(S$176,000)</td><td>(S$287,000)</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Net Profit After Tax (NPAT)</td>
+              <td>S$230,100</td><td>S$543,400</td><td>S$990,000</td><td>S$1,763,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function fmt(n) {
+      return 'S$' + Math.round(n).toLocaleString('en-SG');
+    }
+    function updateSim() {
+      const students = parseFloat(document.getElementById('in-students').value);
+      const audits = parseFloat(document.getElementById('in-audits').value);
+      const saas = parseFloat(document.getElementById('in-saas').value);
+      const corp = parseFloat(document.getElementById('in-corp').value);
+      const cert = parseFloat(document.getElementById('in-cert').value);
+
+      document.getElementById('lbl-students').textContent = students + ' pax / mo';
+      document.getElementById('lbl-audits').textContent = audits + ' audits / mo';
+      document.getElementById('lbl-saas').textContent = saas + ' orders / mo';
+      document.getElementById('lbl-corp').textContent = corp.toFixed(1) + ' engagement / mo';
+      document.getElementById('lbl-cert').textContent = cert + ' certs / mo';
+
+      const revCourse = students * 580 * 12;
+      const revServices = (audits * 720 * 12) + (saas * 150 * 12) + (corp * 6000 * 12) + (cert * 400 * 12);
+      const totalRev = revCourse + revServices;
+      const cogs = totalRev * 0.28;
+      const opex = 94600 + (totalRev > 600000 ? (totalRev - 600000) * 0.12 : 0);
+      const ebitda = totalRev - cogs - opex;
+      const margin = totalRev > 0 ? ((ebitda / totalRev) * 100).toFixed(1) : '0.0';
+
+      document.getElementById('out-rev-course').textContent = fmt(revCourse);
+      document.getElementById('out-rev-services').textContent = fmt(revServices);
+      document.getElementById('out-rev-total').textContent = fmt(totalRev);
+      document.getElementById('out-cogs').textContent = '(' + fmt(cogs) + ')';
+      document.getElementById('out-opex').textContent = '(' + fmt(opex) + ')';
+      document.getElementById('out-ebitda').textContent = fmt(ebitda);
+      document.getElementById('out-margin').textContent = 'Operating Margin: ' + margin + '%';
+    }
+    updateSim();
+  </script>
+</body>
+</html>

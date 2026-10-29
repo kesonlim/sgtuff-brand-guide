@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUFF Learning Pte Ltd — 3-Direction Brand Identity & Collateral Mockup Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b12;
+      --surface: #0f172a;
+      --surface-2: #111827;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --sgtuff-red: #eb2315;
+      --dir-a-navy: #0f172a;
+      --dir-a-gold: #d97706;
+      --dir-a-gold-light: #f59e0b;
+      --dir-a-crimson: #c81e1e;
+      --dir-b-slate: #0b1120;
+      --dir-b-teal: #0d9488;
+      --dir-b-teal-light: #14b8a6;
+      --dir-b-crimson: #e11d48;
+      --dir-c-red: #eb2315;
+      --dir-c-black: #0a0a0a;
+      --dir-c-ivory: #f8fafc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding-bottom: 80px;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 11, 18, 0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+    .top-nav-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .nav-brand-badge {
+      background: var(--sgtuff-red);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+    .nav-link.active {
+      color: #fff;
+      background: rgba(217, 119, 6, 0.15);
+      border-color: rgba(217, 119, 6, 0.4);
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 40px 24px 0;
+    }
+
+    /* Hero Header */
+    .page-header {
+      background: linear-gradient(145deg, #0f172a 0%, #090d16 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #eb2315, #d97706, #0d9488);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+    .lead {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+    .dna-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .dna-pill {
+      font-size: 12px;
+      font-weight: 600;
+      color: #cbd5e1;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 6px 14px;
+      border-radius: 8px;
+    }
+    .dna-pill strong { color: #fff; }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+      background: var(--surface);
+      padding: 16px 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #111827;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .tab-btn:hover { color: #fff; border-color: #475569; }
+    .tab-btn.active {
+      background: #f59e0b;
+      color: #090d16;
+      border-color: #f59e0b;
+    }
+
+    /* Section Headers */
+    .section-block {
+      margin-bottom: 64px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-num {
+      background: rgba(235, 35, 21, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(235, 35, 21, 0.35);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* 3-Column Grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1120px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    .dir-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    }
+    .dir-card.dir-a { border-top: 4px solid #f59e0b; }
+    .dir-card.dir-b { border-top: 4px solid #14b8a6; }
+    .dir-card.dir-c { border-top: 4px solid #eb2315; }
+
+    .dir-card-head {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .dir-tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    .dir-a .dir-tag { color: #f59e0b; }
+    .dir-b .dir-tag { color: #2dd4bf; }
+    .dir-c .dir-tag { color: #f87171; }
+
+    .dir-name {
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .dir-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .dir-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    /* Logo Canvases */
+    .logo-canvas-dark, .logo-canvas-light {
+      border-radius: 14px;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 150px;
+    }
+    .logo-canvas-dark {
+      background: #070b14;
+      border: 1px solid #1e293b;
+    }
+    .logo-canvas-light {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+    .canvas-label {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    /* Custom Logo Lockups */
+    /* Direction A Lockup */
+    .logo-a-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-a-crest {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      border: 2px solid #d97706;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 6px 16px rgba(217, 119, 6, 0.25);
+    }
+    .logo-a-crest::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 7px;
+      height: 7px;
+      background: #eb2315;
+      border-radius: 50%;
+    }
+    .logo-a-tuff-badge {
+      background: #eb2315;
+      color: #fff;
+      font-weight: 900;
+      font-size: 11px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+    .logo-a-pillars {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: #f59e0b;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .logo-a-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-a-main {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .logo-a-main .tuff-box {
+      background: #c81e1e;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+    }
+    .logo-a-main .learning-word {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .logo-a-sub {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #d97706;
+      margin-top: 6px;
+    }
+
+    /* Direction B Lockup */
+    .logo-b-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-b-mark {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #0d9488 0%, #0f172a 100%);
+      border: 1.5px solid #2dd4bf;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+      padding: 10px;
+      position: relative;
+    }
+    .logo-b-mark span {
+      background: rgba(255,255,255,0.9);
+      border-radius: 2px;
+    }
+    .logo-b-mark span:first-child {
+      background: #eb2315;
+    }
+    .logo-b-main {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-b-main .tuff-slash {
+      color: #fff;
+      background: #111827;
+      border-left: 4px solid #eb2315;
+      padding: 2px 8px;
+    }
+    .logo-b-light .logo-b-main .tuff-slash {
+      background: #0f172a;
+      color: #fff;
+    }
+    .logo-b-main .learn-teal {
+      color: #14b8a6;
+    }
+    .logo-b-light .logo-b-main .learn-teal {
+      color: #0d9488;
+    }
+    .logo-b-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
+
+    /* Direction C Lockup (Sibling Heritage) */
+    .logo-c-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-c-top {
+      display: flex;
+      align-items: stretch;
+      border: 2px solid #eb2315;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(235, 35, 21, 0.25);
+    }
+    .logo-c-tuff {
+      background: #eb2315;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      padding: 6px 14px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+    }
+    .logo-c-learn {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      padding: 6px 14px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+    }
+    .logo-c-sub {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-top: 8px;
+      color: #e2e8f0;
+    }
+    .logo-canvas-light .logo-c-sub {
+      color: #0f172a;
+    }
+
+    /* Color Swatches */
+    .swatch-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #090d16;
+    }
+    .swatch-color {
+      height: 44px;
+    }
+    .swatch-meta {
+      padding: 6px 8px;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .swatch-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: block;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .swatch-hex {
+      color: #94a3b8;
+      font-size: 9.5px;
+    }
+
+    /* Social Media Post Mockups */
+    .social-frame {
+      background: #090d16;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .social-topbar {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+      font-size: 11px;
+    }
+    .social-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+    .social-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .social-graphic {
+      padding: 24px 20px;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .social-caption {
+      padding: 12px 14px;
+      font-size: 12px;
+      color: #cbd5e1;
+      border-top: 1px solid #1e293b;
+      background: #0b111e;
+    }
+    .social-caption strong { color: #fff; }
+
+    /* Graphic Themes for Social */
+    .graphic-a-1 {
+      background: radial-gradient(circle at top right, rgba(217, 119, 6, 0.25), transparent 60%), linear-gradient(145deg, #0f172a 0%, #090d16 100%);
+      border-left: 5px solid #d97706;
+    }
+    .graphic-b-1 {
+      background: radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.25), transparent 60%), linear-gradient(145deg, #0b1120 0%, #111827 100%);
+      border-left: 5px solid #14b8a6;
+    }
+    .graphic-c-1 {
+      background: #ffffff;
+      color: #0a0a0a;
+      border-left: 6px solid #eb2315;
+    }
+
+    /* Marketing Collateral Mini Mockups */
+    .collateral-box {
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      background: #090d16;
+    }
+    .brochure-mock {
+      aspect-ratio: 3 / 4;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    }
+
+    /* Website Hero Preview Mockup */
+    .browser-mock {
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #090d16;
+    }
+    .browser-bar {
+      background: #1e293b;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dots {
+      display: flex;
+      gap: 5px;
+    }
+    .dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #475569;
+    }
+    .dots span:nth-child(1) { background: #ef4444; }
+    .dots span:nth-child(2) { background: #f59e0b; }
+    .dots span:nth-child(3) { background: #10b981; }
+    .url-pill {
+      background: #0f172a;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 3px 12px;
+      border-radius: 999px;
+      flex: 1;
+      text-align: center;
+    }
+    .hero-mini {
+      padding: 24px 20px;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cta-btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      border: 1px solid #334155;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-badge">TUFF</span>
+        <span>LEARNING PTE LTD — Brand & Platform Suite</span>
+      </a>
+      <div class="nav-links">
+        <a href="brand-directions-showcase.html" class="nav-link active">1. 3-Direction Brand Guides</a>
+        <a href="collateral-suite.html" class="nav-link">2. Collateral & Certificates</a>
+        <a href="financial-plan-deck.html" class="nav-link">3. Strategy, P&L & Cashflow</a>
+        <a href="index.html" class="nav-link">4. Main Website (`tufflearning.com`)</a>
+        <a href="avatar-tenants.html" class="nav-link">Avatar: Tenants</a>
+        <a href="avatar-landlords.html" class="nav-link">Avatar: Landlords</a>
+        <a href="avatar-agents.html" class="nav-link">Avatar: Agents</a>
+        <a href="../index.html" class="nav-link" style="border-color:#334155;">← SGTUFF Hub</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="page-header">
+      <div class="eyebrow">★ TUFF Learning Pte Ltd • Brand Architecture & Visual Identity Comparison</div>
+      <h1>Three Complete Brand Directions for `tufflearning.com`</h1>
+      <p class="lead">
+        Positioned as an <strong>Independent Sister Brand</strong> to SGTUFF Co-Operative Ltd, <strong>TUFF Learning Pte Ltd</strong> inherits unmistakable SGTUFF visual cues (the heavy geometric <code>TUFF</code> block, Singapore Crimson seal, and institutional authority) while projecting the neutral gravitas of an executive commercial leasing institute trusted by Tenants, Landlords/REITs, and Commercial Property Agents alike.
+      </p>
+      <div class="dna-ribbon">
+        <div class="dna-pill"><strong>Shared DNA Cue 1:</strong> Heavy Geometric <code>TUFF</code> Badge Lockup</div>
+        <div class="dna-pill"><strong>Shared DNA Cue 2:</strong> Singapore State Crimson Accent (<code>#EB2315</code> / <code>#C81E1E</code>)</div>
+        <div class="dna-pill"><strong>Shared DNA Cue 3:</strong> High-Tracking Institutional Subtitle</div>
+        <div class="dna-pill"><strong>Neutrality Shift:</strong> Balanced Academic Palette for Landlords, REITs & CEA Agents</div>
+      </div>
+      <div class="cta-btn-row">
+        <a href="index.html" class="btn-primary">Launch Live Website with A/B/C Theme Switcher →</a>
+        <a href="collateral-suite.html" class="btn-outline">View Full Print & Digital Collateral Suite →</a>
+        <a href="financial-plan-deck.html" class="btn-outline">View 3-Year P&L & Cashflow Dashboard →</a>
+      </div>
+    </header>
+
+    <!-- Quick Section Jump Filter -->
+    <div class="filter-bar">
+      <div style="font-size: 13px; font-weight: 700; color: #cbd5e1;">Jump to Brand Component:</div>
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="document.getElementById('sec-logos').scrollIntoView({behavior:'smooth'})">01. Logo Lockups & Color Tokens</button>
+        <button class="tab-btn" onclick="document.getElementById('sec-social').scrollIntoView({behavior:'smooth'})">02. Social Media Posts & Ad Creatives</button>
+        <button class="tab-btn" onclick="document.getElementById('sec-collateral').scrollIntoView({behavior:'smooth'})">03. Course Brochures & Certificates</button>
+        <button class="tab-btn" onclick="document.getElementById('sec-web').scrollIntoView({behavior:'smooth'})">04. Website Hero Mockups</button>
+      </div>
+    </div>
+
+    <!-- SECTION 1: LOGOS, COLORS & TYPOGRAPHY -->
+    <section id="sec-logos" class="section-block">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-num">01</span>
+          <span>Logo Lockups, Color Palettes & Typography Systems</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <!-- DIRECTION A -->
+        <div class="dir-card dir-a">
+          <div class="dir-card-head">
+            <span class="dir-tag">★ Direction A (Recommended)</span>
+            <div class="dir-name">Executive Legal & Commercial Academy</div>
+            <p class="dir-sub">Oxford Midnight Navy + Prestige Academy Gold + SGTUFF Crimson Seal. Balances executive neutrality with institutional prestige.</p>
+          </div>
+          <div class="dir-body">
+            <!-- Dark Logo -->
+            <div class="logo-canvas-dark">
+              <span class="canvas-label">Primary Dark Lockup</span>
+              <div class="logo-a-wrap">
+                <div class="logo-a-crest">
+                  <span class="logo-a-tuff-badge">TUFF</span>
+                  <span class="logo-a-pillars">Ⅲ</span>
+                </div>
+                <div class="logo-a-text">
+                  <div class="logo-a-main">
+                    <span class="tuff-box">TUFF</span>
+                    <span class="learning-word" style="color:#fff;">LEARNING</span>
+                  </div>
+                  <div class="logo-a-sub">Commercial Leasing & Legal Institute</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Light Logo -->
+            <div class="logo-canvas-light">
+              <span class="canvas-label">Light / Document Lockup</span>
+              <div class="logo-a-wrap">
+                <div class="logo-a-crest" style="background:#0f172a;">
+                  <span class="logo-a-tuff-badge">TUFF</span>
+                  <span class="logo-a-pillars">Ⅲ</span>
+                </div>
+                <div class="logo-a-text">
+                  <div class="logo-a-main">
+                    <span class="tuff-box">TUFF</span>
+                    <span class="learning-word" style="color:#0f172a;">LEARNING</span>
+                  </div>
+                  <div class="logo-a-sub" style="color:#b45309;">Commercial Leasing & Legal Institute</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Color Swatches -->
+            <div class="swatch-row">
+              <div class="swatch">
+                <div class="swatch-color" style="background:#0F172A;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Oxford Navy</span><span class="swatch-hex">#0F172A</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#D97706;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Academy Gold</span><span class="swatch-hex">#D97706</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#C81E1E;"></div>
+                <div class="swatch-meta"><span class="swatch-name">TUFF Crimson</span><span class="swatch-hex">#C81E1E</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#F8FAFC;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Parchment</span><span class="swatch-hex">#F8FAFC</span></div>
+              </div>
+            </div>
+
+            <!-- Typography -->
+            <div style="background:#090d16; padding:14px; border-radius:12px; border:1px solid #1e293b; font-size:12px;">
+              <div style="color:#f59e0b; font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Typography Pairing (Matches SGTUFF Preset)</div>
+              <div><strong>Headlines:</strong> Plus Jakarta Sans ExtraBold + Cinzel Serif Accents</div>
+              <div style="color:#94a3b8; margin-top:2px;"><strong>Data & Clauses:</strong> JetBrains Mono (Clause numbers & psf benchmarks)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIRECTION B -->
+        <div class="dir-card dir-b">
+          <div class="dir-card-head">
+            <span class="dir-tag">Direction B</span>
+            <div class="dir-name">Architectural Modernist & PropTech Analytics</div>
+            <p class="dir-sub">Deep Slate Charcoal + Emerald Intelligence + TUFF Red Cornerstone. Projects commercial real estate data, AI lease tech, and modern rigor.</p>
+          </div>
+          <div class="dir-body">
+            <!-- Dark Logo -->
+            <div class="logo-canvas-dark">
+              <span class="canvas-label">Primary Dark Lockup</span>
+              <div class="logo-b-wrap">
+                <div class="logo-b-mark">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div>
+                  <div class="logo-b-main">
+                    <span class="tuff-slash">TUFF</span>
+                    <span class="learn-teal">LEARNING</span>
+                  </div>
+                  <div class="logo-b-sub">Leasing Intelligence & Advisory</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Light Logo -->
+            <div class="logo-canvas-light logo-b-light">
+              <span class="canvas-label">Light / Document Lockup</span>
+              <div class="logo-b-wrap">
+                <div class="logo-b-mark">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div>
+                  <div class="logo-b-main">
+                    <span class="tuff-slash">TUFF</span>
+                    <span class="learn-teal">LEARNING</span>
+                  </div>
+                  <div class="logo-b-sub" style="color:#475569;">Leasing Intelligence & Advisory</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Color Swatches -->
+            <div class="swatch-row">
+              <div class="swatch">
+                <div class="swatch-color" style="background:#0B1120;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Deep Slate</span><span class="swatch-hex">#0B1120</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#0D9488;"></div>
+                <div class="swatch-meta"><span class="swatch-name">PropTech Teal</span><span class="swatch-hex">#0D9488</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#EB2315;"></div>
+                <div class="swatch-meta"><span class="swatch-name">TUFF Pulse</span><span class="swatch-hex">#EB2315</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#F1F5F9;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Architectural</span><span class="swatch-hex">#F1F5F9</span></div>
+              </div>
+            </div>
+
+            <!-- Typography -->
+            <div style="background:#090d16; padding:14px; border-radius:12px; border:1px solid #1e293b; font-size:12px;">
+              <div style="color:#2dd4bf; font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Typography Pairing</div>
+              <div><strong>Headlines:</strong> Space Grotesk Bold (Geometric PropTech)</div>
+              <div style="color:#94a3b8; margin-top:2px;"><strong>Body & UI:</strong> Plus Jakarta Sans + JetBrains Mono</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIRECTION C -->
+        <div class="dir-card dir-c">
+          <div class="dir-card-head">
+            <span class="dir-tag">Direction C</span>
+            <div class="dir-name">Sibling Heritage Palette (SGTUFF Direct Kin)</div>
+            <p class="dir-sub">Direct adaptation of SGTUFF's iconic Red (`#EB2315`), Coal Black (`#0A0A0A`), and Pure White (`#FFFFFF`) structured as a bold training academy.</p>
+          </div>
+          <div class="dir-body">
+            <!-- Dark Logo -->
+            <div class="logo-canvas-dark">
+              <span class="canvas-label">Primary Dark Lockup</span>
+              <div class="logo-c-wrap">
+                <div class="logo-c-top">
+                  <div class="logo-c-tuff">TUFF</div>
+                  <div class="logo-c-learn">LEARNING</div>
+                </div>
+                <div class="logo-c-sub">Singapore Commercial Leasing Academy</div>
+              </div>
+            </div>
+
+            <!-- Light Logo -->
+            <div class="logo-canvas-light">
+              <span class="canvas-label">Light / Document Lockup</span>
+              <div class="logo-c-wrap">
+                <div class="logo-c-top">
+                  <div class="logo-c-tuff">TUFF</div>
+                  <div class="logo-c-learn">LEARNING</div>
+                </div>
+                <div class="logo-c-sub">Singapore Commercial Leasing Academy</div>
+              </div>
+            </div>
+
+            <!-- Color Swatches -->
+            <div class="swatch-row">
+              <div class="swatch">
+                <div class="swatch-color" style="background:#EB2315;"></div>
+                <div class="swatch-meta"><span class="swatch-name">SGTUFF Red</span><span class="swatch-hex">#EB2315</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#0A0A0A;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Coal Black</span><span class="swatch-hex">#0A0A0A</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#FFFFFF;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Pure White</span><span class="swatch-hex">#FFFFFF</span></div>
+              </div>
+              <div class="swatch">
+                <div class="swatch-color" style="background:#334155;"></div>
+                <div class="swatch-meta"><span class="swatch-name">Steel Neutral</span><span class="swatch-hex">#334155</span></div>
+              </div>
+            </div>
+
+            <!-- Typography -->
+            <div style="background:#090d16; padding:14px; border-radius:12px; border:1px solid #1e293b; font-size:12px;">
+              <div style="color:#f87171; font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Typography Pairing</div>
+              <div><strong>Headlines:</strong> Inter / Plus Jakarta Sans Black (Tight Tracking)</div>
+              <div style="color:#94a3b8; margin-top:2px;"><strong>Subtitles:</strong> High-tracking uppercase institutional sans</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SOCIAL MEDIA POSTS & PAID AD MOCKUPS -->
+    <section id="sec-social" class="section-block">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-num">02</span>
+          <span>Sample Social Media Posts & Paid Ad Creatives (Across All 3 Directions)</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <!-- DIRECTION A SOCIAL POSTS -->
+        <div class="dir-card dir-a">
+          <div class="dir-card-head">
+            <span class="dir-tag">Direction A • Social & Ad Mockups</span>
+            <div class="dir-name">Executive Academy Social Feed</div>
+          </div>
+          <div class="dir-body">
+            <!-- Post 1: Tenant Pain Point Carousel -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#c81e1e; border:1px solid #f59e0b;">TL</div>
+                  <span>TUFF Learning Institute • Sponsored</span>
+                </div>
+                <span style="color:#f59e0b; font-weight:700;">LinkedIn / IG Ad</span>
+              </div>
+              <div class="social-graphic graphic-a-1">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#f59e0b; background:rgba(217,119,6,0.15); padding:4px 10px; border-radius:4px;">Commercial Lease Alert</span>
+                  <span style="font-size:10px; font-family:'JetBrains Mono',monospace; color:#94a3b8;">SLIDE 01 / 05 →</span>
+                </div>
+                <div style="margin: 18px 0;">
+                  <div style="font-family:'Cinzel',serif; font-size:12px; color:#f59e0b; font-weight:700; margin-bottom:4px;">RETAIL & F&B OPERATORS</div>
+                  <div style="font-size:21px; font-weight:800; line-height:1.2; color:#fff;">3 Hidden Reinstatement Clauses That Wipe Out 3 Years of Outlet Profit.</div>
+                  <p style="font-size:12px; color:#cbd5e1; margin-top:8px;">Before you sign your next Letter of Offer (LOO), learn how to cap reinstatement liabilities & enforce FTIC protections.</p>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid rgba(255,255,255,0.1); font-size:11px;">
+                  <span><strong style="color:#eb2315;">TUFF</strong> <span style="font-family:'Cinzel',serif;">LEARNING</span></span>
+                  <span style="background:#f59e0b; color:#090d16; font-weight:800; padding:4px 10px; border-radius:4px;">TL-101 Masterclass ($680)</span>
+                </div>
+              </div>
+              <div class="social-caption">
+                <strong>Signing a new retail or F&B lease in 2027?</strong> Don't let an uncapped demolition clause cost you $120,000 at exit. Join our next 1-Day Executive Cohort or book a 48-Hr Lease Audit Clinic → <code>tufflearning.com/tenants</code>
+              </div>
+            </div>
+
+            <!-- Post 2: Landlord & REIT Compliance -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#0f172a; border:1px solid #f59e0b;">TL</div>
+                  <span>TUFF Learning Institute • B2B Executive</span>
+                </div>
+                <span style="color:#94a3b8;">LinkedIn Carousel</span>
+              </div>
+              <div class="social-graphic" style="background:linear-gradient(135deg, #1e293b 0%, #090d16 100%); border-bottom:4px solid #d97706;">
+                <div style="font-size:10px; font-weight:800; color:#f87171; letter-spacing:0.1em;">FOR REITs, LANDLORDS & MALL ASSET TEAMS</div>
+                <div style="font-size:19px; font-weight:800; color:#fff; margin:12px 0; line-height:1.25;">
+                  Structuring Win-Win Gross Turnover (GTO) Rent & FTIC Compliance in 2027
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+                  <div style="background:rgba(255,255,255,0.04); padding:8px; border-radius:6px; font-size:11px; border-left:2px solid #f59e0b;">✓ Zero FTIC Dispute Escalations</div>
+                  <div style="background:rgba(255,255,255,0.04); padding:8px; border-radius:6px; font-size:11px; border-left:2px solid #f59e0b;">✓ Sustainable Tenant Retention</div>
+                </div>
+                <div style="font-size:11px; color:#f59e0b; font-weight:700;">In-House Corporate Workshops Available • tufflearning.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIRECTION B SOCIAL POSTS -->
+        <div class="dir-card dir-b">
+          <div class="dir-card-head">
+            <span class="dir-tag">Direction B • Social & Ad Mockups</span>
+            <div class="dir-name">PropTech & Data-Driven Social Feed</div>
+          </div>
+          <div class="dir-body">
+            <!-- Post 1: AI Lease Scanner Ad -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#0d9488;">TL</div>
+                  <span>TUFF Learning AI • Sponsored</span>
+                </div>
+                <span style="color:#2dd4bf; font-weight:700;">Meta / Search Ad</span>
+              </div>
+              <div class="social-graphic graphic-b-1">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#2dd4bf; background:rgba(20,184,166,0.15); padding:4px 10px; border-radius:4px;">AI LEASE RISK SCANNER v2.4</span>
+                  <span style="font-size:10px; color:#f87171; font-weight:800;">● 4 RED FLAGS FOUND</span>
+                </div>
+                <div style="margin: 16px 0;">
+                  <div style="font-family:'Space Grotesk',sans-serif; font-size:21px; font-weight:800; line-height:1.2; color:#fff;">Upload Your Letter of Offer. Flag Unfair Clauses in 90 Seconds.</div>
+                  <div style="background:#070b12; border:1px solid #1e293b; border-radius:8px; padding:10px; margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:10.5px;">
+                    <div style="color:#f87171;">[!] Clause 14.2: Uncapped Chilled Water Hike (Non-FTIC)</div>
+                    <div style="color:#fbbf24; margin-top:4px;">[!] Clause 22.1: Pre-Termination Penalty = Unexpired Term</div>
+                  </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-top:10px; border-top:1px solid rgba(255,255,255,0.1); font-size:11px;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:800;">TUFF <span style="color:#2dd4bf;">LEARNING</span></span>
+                  <span style="background:#14b8a6; color:#070b12; font-weight:800; padding:4px 10px; border-radius:4px;">Scan Lease Now ($99) →</span>
+                </div>
+              </div>
+              <div class="social-caption">
+                <strong>Don't sign blind.</strong> Benchmark your retail or F&B Tenancy Agreement against 1,000+ Singapore commercial leases & the FTIC Code of Conduct in 90 seconds → <code>tufflearning.com</code>
+              </div>
+            </div>
+
+            <!-- Post 2: Commercial Agent CPD -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#0d9488;">TL</div>
+                  <span>TUFF Learning • CEA Agents Track</span>
+                </div>
+                <span style="color:#94a3b8;">IG / FB Feed</span>
+              </div>
+              <div class="social-graphic" style="background:linear-gradient(135deg, #0b1120 0%, #0f292a 100%); border-bottom:4px solid #14b8a6;">
+                <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#2dd4bf;">TRACK 03 // COMMERCIAL PROPERTY AGENTS</div>
+                <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:800; color:#fff; margin:12px 0; line-height:1.25;">
+                  Break Into $35,000+ Commercial Shophouse & Retail Leasing Commissions.
+                </div>
+                <p style="font-size:12px; color:#cbd5e1; margin-bottom:12px;">Master LOO drafting, URA Change-of-Use, GST/Stamp Duty & FTIC rules. Earn your CCLS Certification.</p>
+                <div style="font-size:11px; color:#2dd4bf; font-weight:700;">Next 4-Hr Intensive Cohort: $280 / pax • Register Now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIRECTION C SOCIAL POSTS -->
+        <div class="dir-card dir-c">
+          <div class="dir-card-head">
+            <span class="dir-tag">Direction C • Social & Ad Mockups</span>
+            <div class="dir-name">Sibling Heritage High-Contrast Feed</div>
+          </div>
+          <div class="dir-body">
+            <!-- Post 1: High-Impact White/Red/Black -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#eb2315;">TL</div>
+                  <span>TUFF Learning Pte Ltd • Sponsored</span>
+                </div>
+                <span style="color:#f87171; font-weight:700;">High-Impact Ad</span>
+              </div>
+              <div class="social-graphic graphic-c-1">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="background:#eb2315; color:#fff; font-size:10px; font-weight:900; padding:3px 8px; text-transform:uppercase;">48-Hour Lease Audit Clinic</span>
+                  <span style="font-size:10px; font-weight:800; color:#0a0a0a;">FIXED FEE: $480</span>
+                </div>
+                <div style="margin: 16px 0;">
+                  <div style="font-size:22px; font-weight:900; line-height:1.15; color:#0a0a0a; letter-spacing:-0.02em;">
+                    NEVER SIGN A LANDLORD'S LETTER OF OFFER WITHOUT A PRACTITIONER AUDIT.
+                  </div>
+                  <p style="font-size:12px; color:#334155; margin-top:8px; font-weight:600;">
+                    Law firms charge $4,500+ and take 3 weeks. Our commercial leasing specialists redline your LOO in 48 hours for a flat $480.
+                  </p>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; padding-top:10px; border-top:2px solid #0a0a0a; font-size:11px; font-weight:900;">
+                  <span><span style="background:#eb2315; color:#fff; padding:2px 6px;">TUFF</span> LEARNING</span>
+                  <span style="color:#eb2315;">BOOK CLINIC SLOT →</span>
+                </div>
+              </div>
+              <div class="social-caption">
+                <strong>Fast, practical, battle-tested lease protection.</strong> Get your Letter of Offer or Tenancy Agreement audited in 48 hours → <code>tufflearning.com</code>
+              </div>
+            </div>
+
+            <!-- Post 2: Dark Mode Sibling Heritage -->
+            <div class="social-frame">
+              <div class="social-topbar">
+                <div class="social-author">
+                  <div class="social-avatar" style="background:#eb2315;">TL</div>
+                  <span>TUFF Learning • Executive Bootcamps</span>
+                </div>
+                <span style="color:#94a3b8;">LinkedIn Event</span>
+              </div>
+              <div class="social-graphic" style="background:#0a0a0a; border-bottom:5px solid #eb2315;">
+                <div style="font-size:10px; font-weight:900; color:#eb2315; letter-spacing:0.14em;">SINGAPORE COMMERCIAL LEASING ACADEMY</div>
+                <div style="font-size:19px; font-weight:900; color:#fff; margin:12px 0; line-height:1.2;">
+                  CONTRACT DEVELOPMENT & FAIR TENANCY NEGOTIATION MASTERCLASS
+                </div>
+                <p style="font-size:12px; color:#94a3b8; margin-bottom:12px;">Built on frontline insights from 2,600+ Singapore retail & dining outlets. Practical clauses, zero fluff.</p>
+                <div style="font-size:11px; color:#fff; font-weight:800;"><span style="color:#eb2315;">●</span> Live Virtual Cohort • $680/pax ($1,680 for 3)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MARKETING COLLATERAL & COURSE BROCHURES -->
+    <section id="sec-collateral" class="section-block">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-num">03</span>
+          <span>Executive Course Brochure Covers & Credential Aesthetics</span>
+        </div>
+        <a href="collateral-suite.html" class="btn-outline" style="padding:7px 14px; font-size:12px;">Open Full Print-Ready Collateral Suite →</a>
+      </div>
+
+      <div class="grid-3">
+        <!-- Brochure A -->
+        <div class="collateral-box">
+          <div style="font-size:12px; font-weight:800; color:#f59e0b; margin-bottom:12px;">Direction A — Executive Course Prospectus Cover</div>
+          <div class="brochure-mock" style="background:linear-gradient(155deg, #0f172a 0%, #070b12 100%); border:2px solid #d97706;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <span style="background:#c81e1e; color:#fff; font-weight:900; font-size:11px; padding:2px 7px; border-radius:3px;">TUFF</span>
+                <span style="font-family:'Cinzel',serif; font-weight:700; font-size:13px; color:#fff; margin-left:4px;">LEARNING</span>
+                <div style="font-size:8px; color:#f59e0b; letter-spacing:0.15em; text-transform:uppercase; margin-top:3px;">Executive Prospectus 2027</div>
+              </div>
+              <span style="border:1px solid #f59e0b; color:#f59e0b; font-size:9px; font-weight:800; padding:3px 8px; border-radius:99px;">CCLP ACCREDITED</span>
+            </div>
+
+            <div style="my:auto; border-left:3px solid #d97706; padding-left:14px;">
+              <div style="font-size:10px; font-weight:800; color:#f59e0b; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;">Executive Curriculum & Advisory</div>
+              <div style="font-family:'Cinzel',serif; font-size:22px; font-weight:800; color:#fff; line-height:1.2; margin-bottom:10px;">
+                MASTERING COMMERCIAL LEASING LAW & NEGOTIATION IN SINGAPORE
+              </div>
+              <p style="font-size:11.5px; color:#94a3b8;">
+                Practical frameworks for Commercial Tenants, REIT Asset Managers, and Licensed Property Brokers.
+              </p>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-top:14px; border-top:1px solid rgba(217,119,6,0.3); font-size:10px; color:#cbd5e1;">
+              <span>www.tufflearning.com</span>
+              <span style="color:#f59e0b; font-weight:700;">Tracks 01 • 02 • 03</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brochure B -->
+        <div class="collateral-box">
+          <div style="font-size:12px; font-weight:800; color:#2dd4bf; margin-bottom:12px;">Direction B — PropTech & Benchmark Report Cover</div>
+          <div class="brochure-mock" style="background:linear-gradient(155deg, #0b1120 0%, #0f292a 100%); border:2px solid #14b8a6;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:14px;">
+                <span style="border-left:3px solid #eb2315; padding-left:6px; color:#fff;">TUFF</span> <span style="color:#2dd4bf;">LEARNING</span>
+              </div>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#2dd4bf; background:rgba(20,184,166,0.12); padding:3px 8px; border-radius:4px;">DATA EDITION 2027</span>
+            </div>
+
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#2dd4bf; margin-bottom:6px;">// ANNUAL BENCHMARK & SYLLABUS</div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:23px; font-weight:800; color:#fff; line-height:1.15; margin-bottom:10px;">
+                Singapore Retail & Shophouse Leasing Intelligence Report
+              </div>
+              <p style="font-size:11.5px; color:#94a3b8;">
+                PSF Rental Benchmarks, GTO Structures, FTIC Clause Audits & Executive Certification Pathways.
+              </p>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-top:14px; border-top:1px solid rgba(20,184,166,0.3); font-family:'JetBrains Mono',monospace; font-size:10px; color:#cbd5e1;">
+              <span>tufflearning.com</span>
+              <span style="color:#2dd4bf;">SGD $580 / REPORT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brochure C -->
+        <div class="collateral-box">
+          <div style="font-size:12px; font-weight:800; color:#f87171; margin-bottom:12px;">Direction C — Sibling Heritage Workbook Cover</div>
+          <div class="brochure-mock" style="background:#ffffff; color:#0a0a0a; border:2px solid #eb2315;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #0a0a0a; padding-bottom:12px;">
+              <div style="display:flex; align-items:center;">
+                <span style="background:#eb2315; color:#fff; font-weight:900; font-size:13px; padding:3px 8px;">TUFF</span>
+                <span style="background:#0a0a0a; color:#fff; font-weight:800; font-size:13px; padding:3px 8px;">LEARNING</span>
+              </div>
+              <span style="font-size:9px; font-weight:900; color:#eb2315; text-transform:uppercase;">Official Playbook</span>
+            </div>
+
+            <div>
+              <div style="background:#eb2315; color:#fff; display:inline-block; font-size:9px; font-weight:900; padding:3px 8px; text-transform:uppercase; margin-bottom:8px;">Battle-Tested Clause Library</div>
+              <div style="font-size:24px; font-weight:900; color:#0a0a0a; line-height:1.1; letter-spacing:-0.03em; margin-bottom:10px;">
+                THE SINGAPORE COMMERCIAL TENANCY SURVIVAL & NEGOTIATION PLAYBOOK
+              </div>
+              <p style="font-size:11.5px; color:#334155; font-weight:600;">
+                45+ Standard Protective Rider Clauses, Reinstatement Caps & LOO Redline Scripts.
+              </p>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-top:14px; border-top:2px solid #0a0a0a; font-size:10px; font-weight:800; color:#0a0a0a;">
+              <span>TUFF LEARNING PTE LTD</span>
+              <span style="color:#eb2315;">tufflearning.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WEBSITE HERO MOCKUPS -->
+    <section id="sec-web" class="section-block">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="section-num">04</span>
+          <span>Website Design Mockups (`tufflearning.com` Across All 3 Directions)</span>
+        </div>
+        <a href="index.html" class="btn-primary" style="padding:8px 16px; font-size:12px;">Open Live Website (`index.html`) with Theme Switcher →</a>
+      </div>
+
+      <div class="grid-3">
+        <!-- Web A -->
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="url-pill">https://tufflearning.com (Direction A: Executive Academy)</div>
+          </div>
+          <div class="hero-mini" style="background:radial-gradient(circle at top right, rgba(217,119,6,0.2), transparent 60%), #090d16;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px;">
+              <div style="font-size:12px; font-weight:800;"><span style="background:#c81e1e; padding:2px 6px; border-radius:3px;">TUFF</span> <span style="font-family:'Cinzel',serif; color:#f59e0b;">LEARNING</span></div>
+              <div style="font-size:10px; color:#cbd5e1;">Courses • Lease Clinic • AI Scanner</div>
+            </div>
+            <div style="margin:18px 0;">
+              <span style="font-size:9px; color:#f59e0b; border:1px solid rgba(245,158,11,0.4); padding:2px 8px; border-radius:99px; font-weight:700;">SINGAPORE'S COMMERCIAL LEASING INSTITUTE</span>
+              <h3 style="font-size:19px; font-weight:800; margin:8px 0; line-height:1.2;">Master Commercial Leasing Law, FTIC Strategy & Deal Structuring.</h3>
+              <p style="font-size:11px; color:#94a3b8;">Executive cohorts, 48-hour fixed-fee lease audits, and AI clause benchmarking for Tenants, Landlords & Agents.</p>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <span style="background:#f59e0b; color:#090d16; font-size:10px; font-weight:800; padding:6px 12px; border-radius:6px;">Explore Cohorts</span>
+              <span style="border:1px solid #334155; color:#fff; font-size:10px; font-weight:700; padding:6px 12px; border-radius:6px;">Book $480 Lease Audit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web B -->
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="url-pill">https://tufflearning.com (Direction B: PropTech Modernist)</div>
+          </div>
+          <div class="hero-mini" style="background:radial-gradient(circle at bottom right, rgba(20,184,166,0.2), transparent 60%), #0b1120;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:800;"><span style="border-left:3px solid #eb2315; padding-left:5px;">TUFF</span> <span style="color:#2dd4bf;">LEARNING</span></div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:#2dd4bf;">[AI LEASE SCANNER LIVE]</div>
+            </div>
+            <div style="margin:18px 0;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#2dd4bf; background:rgba(20,184,166,0.12); padding:2px 8px; border-radius:4px;">DATA-DRIVEN COMMERCIAL LEASING</span>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:800; margin:8px 0; line-height:1.2;">Decode Every Clause. Benchmark Every PSF. Close Better Leases.</h3>
+              <p style="font-size:11px; color:#94a3b8;">Accredited training, AI-powered LOO/TA clause risk scoring, and corporate advisory.</p>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <span style="background:#14b8a6; color:#070b12; font-size:10px; font-weight:800; padding:6px 12px; border-radius:6px;">Run $99 AI Lease Scan</span>
+              <span style="border:1px solid #334155; color:#fff; font-size:10px; font-weight:700; padding:6px 12px; border-radius:6px;">View 3 Avatar Tracks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web C -->
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="url-pill">https://tufflearning.com (Direction C: Sibling Heritage)</div>
+          </div>
+          <div class="hero-mini" style="background:#f8fafc; color:#0a0a0a;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #0a0a0a; padding-bottom:10px;">
+              <div style="font-size:11px; font-weight:900;"><span style="background:#eb2315; color:#fff; padding:2px 6px;">TUFF</span> <span style="background:#0a0a0a; color:#fff; padding:2px 6px;">LEARNING</span></div>
+              <div style="font-size:10px; font-weight:800; color:#0a0a0a;">Tenants • Landlords • Agents</div>
+            </div>
+            <div style="margin:18px 0;">
+              <span style="background:#eb2315; color:#fff; font-size:9px; font-weight:900; padding:2px 8px; text-transform:uppercase;">Practical Commercial Tenancy Education</span>
+              <h3 style="font-size:19px; font-weight:900; margin:8px 0; line-height:1.15; letter-spacing:-0.02em; color:#0a0a0a;">BATTLE-TESTED LEASING COURSES & CONTRACT AUDITS.</h3>
+              <p style="font-size:11px; color:#334155; font-weight:600;">Protect your business margins and master Singapore's Fair Tenancy Code of Conduct in 1 day.</p>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <span style="background:#eb2315; color:#fff; font-size:10px; font-weight:900; padding:6px 12px; border-radius:4px;">Enroll in TL-101 ($680)</span>
+              <span style="background:#0a0a0a; color:#fff; font-size:10px; font-weight:800; padding:6px 12px; border-radius:4px;">Download Playbook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

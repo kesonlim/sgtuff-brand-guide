@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dir-a">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUFF Learning Pte Ltd (tufflearning.com) — Singapore's Commercial Leasing & Tenancy Law Institute</title>
+  <meta name="description" content="Executive commercial leasing courses, 48-hour fixed-fee Letter of Offer & Tenancy Agreement audit clinics, FTIC compliance training, and AI lease risk scanning for Singapore Tenants, Landlords & Property Agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@600;700;800&family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Theme A: Executive Legal & Commercial Academy (Default Recommended) */
+    :root, [data-theme="dir-a"] {
+      --bg: #070b12;
+      --surface: #0f172a;
+      --surface-alt: #111827;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #f59e0b;
+      --primary-dark: #d97706;
+      --primary-contrast: #070b12;
+      --crimson: #c81e1e;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --hero-glow: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.22), transparent 55%);
+    }
+
+    /* Theme B: Architectural Modernist & PropTech Analytics */
+    [data-theme="dir-b"] {
+      --bg: #080d1a;
+      --surface: #0f172a;
+      --surface-alt: #131c31;
+      --border: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #14b8a6;
+      --primary-dark: #0d9488;
+      --primary-contrast: #041311;
+      --crimson: #eb2315;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --hero-glow: radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.22), transparent 55%);
+    }
+
+    /* Theme C: Sibling Heritage Palette (Academic Light/Red/Black) */
+    [data-theme="dir-c"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #cbd5e1;
+      --text: #0a0a0a;
+      --text-muted: #475569;
+      --primary: #eb2315;
+      --primary-dark: #c81e1e;
+      --primary-contrast: #ffffff;
+      --crimson: #eb2315;
+      --font-display: 'Inter', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --hero-glow: radial-gradient(circle at 80% 20%, rgba(235, 35, 21, 0.08), transparent 55%);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Brand Suite Switcher Bar */
+    .suite-bar {
+      background: #04070c;
+      color: #e2e8f0;
+      border-bottom: 1px solid #1e293b;
+      padding: 8px 24px;
+      font-size: 12px;
+    }
+    .suite-bar-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .theme-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .theme-btn {
+      background: #111827;
+      color: #94a3b8;
+      border: 1px solid #334155;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .theme-btn.active {
+      background: #f59e0b;
+      color: #090d16;
+      border-color: #f59e0b;
+    }
+    .suite-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .suite-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .suite-links a:hover { color: #f59e0b; }
+
+    /* Main Website Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+    .header-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .tuff-badge {
+      background: var(--crimson);
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+      padding: 4px 10px;
+      border-radius: 5px;
+      letter-spacing: 0.02em;
+    }
+    .learning-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.02em;
+    }
+    .brand-sub {
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      display: block;
+      margin-top: -2px;
+    }
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 700;
+      opacity: 0.88;
+    }
+    .main-nav a:hover { opacity: 1; color: var(--primary); }
+    .avatar-pill-link {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px !important;
+    }
+    .btn-cta {
+      background: var(--primary);
+      color: var(--primary-contrast);
+      font-weight: 800;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 64px 0 56px;
+      background: var(--hero-glow);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+    .hero p.lead {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 640px;
+    }
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-stat strong {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .trust-stat span {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Interactive Lease Risk & ROI Calculator Card */
+    .calc-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.28);
+    }
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .calc-field {
+      margin-bottom: 14px;
+    }
+    .calc-field label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .calc-field input, .calc-field select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+    .calc-result {
+      background: var(--surface-alt);
+      border-left: 4px solid var(--crimson);
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+
+    /* 3 Avatar Funnel Cards */
+    .section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 40px;
+    }
+    .section-head h2 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 980px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .track-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .bullet-list {
+      list-style: none;
+      margin: 16px 0 24px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    .bullet-list li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .bullet-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      background: var(--surface);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Executive Bar with Live Brand Theme Switcher -->
+  <div class="suite-bar">
+    <div class="suite-bar-inner">
+      <div class="theme-switcher">
+        <span style="font-weight:800; color:#f59e0b; margin-right:4px;">LIVE BRAND THEME SWITCHER:</span>
+        <button class="theme-btn active" id="btn-dir-a" onclick="setTheme('dir-a')">Direction A: Executive Navy & Gold</button>
+        <button class="theme-btn" id="btn-dir-b" onclick="setTheme('dir-b')">Direction B: PropTech Slate & Teal</button>
+        <button class="theme-btn" id="btn-dir-c" onclick="setTheme('dir-c')">Direction C: Sibling Heritage Light/Red</button>
+      </div>
+      <div class="suite-links">
+        <a href="brand-directions-showcase.html">Brand Guides</a>
+        <a href="collateral-suite.html">Collateral & Certs</a>
+        <a href="financial-plan-deck.html">3-Yr P&L & Cashflow</a>
+        <a href="../index.html">← SGTUFF Co-op Hub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Website Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="tuff-badge">TUFF</span>
+        <div>
+          <span class="learning-title">LEARNING</span>
+          <span class="brand-sub">Commercial Leasing & Legal Institute</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="#tracks">Courses</a>
+        <a href="#services">48-Hr Lease Clinic & AI</a>
+        <a href="avatar-tenants.html" class="avatar-pill-link">For Tenants & SMEs</a>
+        <a href="avatar-landlords.html" class="avatar-pill-link">For Landlords & REITs</a>
+        <a href="avatar-agents.html" class="avatar-pill-link">For Property Agents</a>
+        <a href="#services" class="btn-cta">Book $480 Lease Audit →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">★ Singapore's Premier Commercial Leasing Institute • FTIC Aligned</div>
+          <h1>Master Commercial Leasing Law, Negotiation & Deal Structuring.</h1>
+          <p class="lead">
+            Whether you are an F&B/Retail operator signing a 3-year lease, a REIT asset manager structuring Gross Turnover (GTO) rent, or a commercial property broker closing shophouse deals—<strong>TUFF Learning Pte Ltd</strong> delivers battle-tested courses, 48-hour fixed-fee contract audits, and AI clause intelligence.
+          </p>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#tracks" class="btn-cta">Explore Flagship Courses ($280 – $1,480) →</a>
+            <a href="#services" class="btn-secondary">48-Hr Fixed-Fee Lease Audit ($480)</a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-stat">
+              <strong>2,600+</strong>
+              <span>Retail & F&B Outlets Benchmarked</span>
+            </div>
+            <div class="trust-stat">
+              <strong>48 Hrs</strong>
+              <span>Fixed-Fee LOO & TA Audit Turnaround</span>
+            </div>
+            <div class="trust-stat">
+              <strong>100%</strong>
+              <span>Aligned with Singapore FTIC Code</span>
+            </div>
+            <div class="trust-stat">
+              <strong>3 Tracks</strong>
+              <span>Tenants • Landlords • CEA Agents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Commercial Lease Risk & Course ROI Calculator -->
+        <div class="calc-card">
+          <div class="calc-header">
+            <div>
+              <div style="font-size:11px; font-weight:800; color:var(--primary); text-transform:uppercase;">Interactive Diagnostic Tool</div>
+              <div style="font-size:17px; font-weight:800;">Commercial Lease Financial Risk Estimator</div>
+            </div>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(235,35,21,0.15); color:#f87171; padding:4px 8px; border-radius:6px; font-weight:700;">LIVE</span>
+          </div>
+
+          <div class="calc-field">
+            <label><span>Your Role / Avatar Track</span></label>
+            <select id="calc-role" onchange="runRiskCalc()">
+              <option value="tenant">Commercial Tenant / Retail & F&B Operator</option>
+              <option value="landlord">Landlord / REIT / Mall Leasing Manager</option>
+              <option value="agent">Commercial Real Estate Agent / Broker</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <label>
+              <span>Premises Floor Area (Sq Ft)</span>
+              <span id="lbl-sqft" style="font-family:'JetBrains Mono',monospace; color:var(--primary);">1,500 sq ft</span>
+            </label>
+            <input type="range" id="in-sqft" min="400" max="10000" step="100" value="1500" oninput="runRiskCalc()">
+          </div>
+
+          <div class="calc-field">
+            <label>
+              <span>Monthly Gross Rent (SGD)</span>
+              <span id="lbl-rent" style="font-family:'JetBrains Mono',monospace; color:var(--primary);">S$18,000 / mo</span>
+            </label>
+            <input type="range" id="in-rent" min="4000" max="120000" step="1000" value="18000" oninput="runRiskCalc()">
+          </div>
+
+          <div class="calc-result">
+            <div style="font-size:11px; font-weight:800; text-transform:uppercase; color:#f87171; margin-bottom:4px;">
+              Estimated Uncapped Clause Exposure (3-Yr Term)
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:26px; font-weight:800; margin-bottom:6px;" id="out-exposure">
+              S$119,400 At Risk
+            </div>
+            <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;" id="out-breakdown">
+              Includes ~S$67,500 uncapped reinstatement trap + S$32,400 service/chilled water escalation + S$19,500 deposit retention risk.
+            </p>
+            <a href="avatar-tenants.html" id="out-cta-link" class="btn-cta" style="width:100%; justify-content:center;">
+              Protect Margin: View Tenant Track & $480 Audit →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 TARGET AVATAR SEO & AD LANDING PAGE LAUNCHER -->
+  <section id="avatars" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div style="font-size:12px; font-weight:800; color:var(--primary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">
+          Neutral, Multi-Sided Commercial Institute
+        </div>
+        <h2>Choose Your Dedicated Curriculum & Advisory Track</h2>
+        <p style="color:var(--text-muted); font-size:15px;">
+          Each track features a dedicated SEO & Paid Ad Landing Page engineered for high-conversion lead capture and role-specific training.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Avatar 1 -->
+        <div class="card">
+          <div>
+            <span class="track-pill">Track 01 • Commercial Tenants & SMEs</span>
+            <h3>Retail, F&B, Clinic & Multi-Outlet Operators</h3>
+            <p style="font-size:13.5px; color:var(--text-muted);">
+              Stop signing landlord-drafted Letters of Offer blindly. Learn how to cap reinstatement liabilities, negotiate rent-free fit-out periods, and enforce your rights under the Fair Tenancy Code.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>TL-101:</strong> 1-Day Commercial Lease Negotiation Masterclass (S$680/pax)</li>
+              <li><strong>TL-201:</strong> Multi-Outlet Expansion & Portfolio Restructuring Lab (S$1,480/pax)</li>
+              <li><strong>48-Hr Lease Audit Clinic:</strong> Fixed-Fee LOO Review (S$480)</li>
+            </ul>
+          </div>
+          <a href="avatar-tenants.html" class="btn-cta" style="justify-content:center;">Open Tenant Avatar Landing Page →</a>
+        </div>
+
+        <!-- Avatar 2 -->
+        <div class="card">
+          <div>
+            <span class="track-pill">Track 02 • Landlords, REITs & Developers</span>
+            <h3>Mall Leasing & Commercial Asset Management Teams</h3>
+            <p style="font-size:13.5px; color:var(--text-muted);">
+              Upskill your leasing executives to structure FTIC-compliant tenancy agreements, optimize Gross Turnover (GTO) rent formulas, and resolve tenant renewals without costly SMC disputes.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>TL-301:</strong> Sustainable Mall Leasing & FTIC Compliance Workshop (S$880/pax)</li>
+              <li><strong>Private Corporate Cohort:</strong> Customized In-House Training (S$8,500 / 15 pax)</li>
+              <li><strong>2027 Benchmark Report:</strong> Mall & Shophouse PSF Intelligence (S$580)</li>
+            </ul>
+          </div>
+          <a href="avatar-landlords.html" class="btn-cta" style="justify-content:center;">Open Landlord & REIT Landing Page →</a>
+        </div>
+
+        <!-- Avatar 3 -->
+        <div class="card">
+          <div>
+            <span class="track-pill">Track 03 • Commercial Property Agents</span>
+            <h3>Licensed Real Estate Brokers & Corporate Leasing Agents</h3>
+            <p style="font-size:13.5px; color:var(--text-muted);">
+              Transition from cooling-measure residential sales into lucrative S$20k–S$80k commercial leasing commissions. Master LOO drafting, URA change-of-use, GST/Stamp Duty, and earn CPD credits.
+            </p>
+            <ul class="bullet-list">
+              <li><strong>TL-401A:</strong> 4-Hour Commercial Leasing Law & LOO Seminar (S$280/pax)</li>
+              <li><strong>TL-401B:</strong> Certified Commercial Leasing Specialist — CCLS (S$980/pax)</li>
+              <li><strong>Agent Pro AI Pass:</strong> 15 Lease Risk Scans/Yr for Client Deals (S$490/yr)</li>
+            </ul>
+          </div>
+          <a href="avatar-agents.html" class="btn-cta" style="justify-content:center;">Open Commercial Agent Landing Page →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAGSHIP COURSES & 6 COMMERCIAL SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div style="font-size:12px; font-weight:800; color:var(--primary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">
+          Beyond Classroom Training • 6 Commercial Revenue Engines
+        </div>
+        <h2>Advisory Clinics, AI Lease Intelligence & Practitioner Toolkits</h2>
+        <p style="color:var(--text-muted); font-size:15px;">
+          Immediate, fixed-fee commercial leasing solutions designed to protect your balance sheet and accelerate deal closures.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 01 • 48-Hr Turnaround</span>
+            <h3>Fixed-Fee Lease Contract Audit & Red-Flag Clinic</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              Have our veteran commercial leasing practitioners and legal specialists review your Letter of Offer (LOO) or Tenancy Agreement (TA) and provide exact redline rider wording in 48 hours.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$480 (LOO) / S$1,280 (TA)</span>
+            <a href="avatar-tenants.html#clinic" class="btn-secondary" style="padding:7px 12px; font-size:12px;">Book Audit →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 02 • Instant SaaS Portal</span>
+            <h3>AI Lease Clause Risk Scanner & PSF Benchmark</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              Upload any Singapore commercial LOO or TA PDF. In 90 seconds, receive a Traffic-Light Risk Report flagging non-FTIC clauses, uncapped charges, and market psf comparisons.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$99 / Scan • S$490 / Yr</span>
+            <a href="avatar-tenants.html#clinic" class="btn-secondary" style="padding:7px 12px; font-size:12px;">Try Scanner →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 03 • Done-For-You Advisory</span>
+            <h3>Corporate Lease Renewal & Restructuring Retainers</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              End-to-end commercial negotiation strategy, rental benchmark modeling, reinstatement settlement, and SMC mediation preparation for multi-outlet retail & F&B chains.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$3,500 – S$8,500</span>
+            <a href="financial-plan-deck.html" class="btn-secondary" style="padding:7px 12px; font-size:12px;">Enquire →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 04 • Instant Digital Download</span>
+            <h3>Battle-Tested Clause Playbook & 45 Rider Templates</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              Download our complete library of 45+ protective tenant rider clauses, handover condition checklists, and Excel Gross Turnover (GTO) rent viability calculators.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$199 – S$499</span>
+            <a href="collateral-suite.html" class="btn-secondary" style="padding:7px 12px; font-size:12px;">Preview Vault →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 05 • Professional Credential</span>
+            <h3>Certified Commercial Leasing Practitioner (CCLP™)</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              Official industry accreditation exam, verifiable LinkedIn digital badge, and listing on the public TUFF Learning Verified Practitioners Directory.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$380 Exam + S$150/yr</span>
+            <a href="collateral-suite.html" class="btn-secondary" style="padding:7px 12px; font-size:12px;">View Diploma →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <span class="track-pill">Service 06 • Market Intelligence</span>
+            <h3>Annual Singapore Commercial Rental Benchmark Report</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:16px;">
+              Anonymized psf rent ranges, service charge escalations, and GTO percentages across Orchard, CBD, Suburban Regional Malls, and Heartland Shophouses.
+            </p>
+          </div>
+          <div style="border-top:1px solid var(--border); padding-top:14px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace; font-weight:800; font-size:16px; color:var(--primary);">S$580 / Report</span>
+            <a href="brand-directions-showcase.html#sec-collateral" class="btn-secondary" style="padding:7px 12px; font-size:12px;">Preview Cover →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div>
+        <strong style="color:var(--text);">TUFF Learning Pte Ltd</strong> (`tufflearning.com`) — Independent Sister Institute to SGTUFF Co-Operative Ltd.<br>
+        <span>Promoting Clarity, Reciprocity & Commercial Mastery Across Singapore's Leasing Ecosystem.</span>
+      </div>
+      <div style="display:flex; gap:16px;">
+        <a href="avatar-tenants.html" style="color:var(--primary); text-decoration:none; font-weight:700;">Tenants Track</a>
+        <a href="avatar-landlords.html" style="color:var(--primary); text-decoration:none; font-weight:700;">Landlords Track</a>
+        <a href="avatar-agents.html" style="color:var(--primary); text-decoration:none; font-weight:700;">Agents Track</a>
+        <a href="financial-plan-deck.html" style="color:var(--primary); text-decoration:none; font-weight:700;">Financial Model</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.getElementById('btn-dir-a').classList.toggle('active', theme === 'dir-a');
+      document.getElementById('btn-dir-b').classList.toggle('active', theme === 'dir-b');
+      document.getElementById('btn-dir-c').classList.toggle('active', theme === 'dir-c');
+    }
+
+    function runRiskCalc() {
+      const role = document.getElementById('calc-role').value;
+      const sqft = parseInt(document.getElementById('in-sqft').value, 10);
+      const rent = parseInt(document.getElementById('in-rent').value, 10);
+
+      document.getElementById('lbl-sqft').textContent = sqft.toLocaleString() + ' sq ft';
+      document.getElementById('lbl-rent').textContent = 'S$' + rent.toLocaleString() + ' / mo';
+
+      const reinstateRisk = sqft * 45;
+      const escalationRisk = Math.round(rent * 36 * 0.05);
+      const depositRisk = Math.round(rent * 1.1);
+      const totalRisk = reinstateRisk + escalationRisk + depositRisk;
+
+      const outExp = document.getElementById('out-exposure');
+      const outBrk = document.getElementById('out-breakdown');
+      const outCta = document.getElementById('out-cta-link');
+
+      if (role === 'tenant') {
+        outExp.textContent = 'S$' + totalRisk.toLocaleString() + ' Liability Exposure';
+        outBrk.textContent = 'Includes ~S$' + reinstateRisk.toLocaleString() + ' uncapped reinstatement cost + S$' + escalationRisk.toLocaleString() + ' service/utility escalation + S$' + depositRisk.toLocaleString() + ' security deposit forfeiture risk.';
+        outCta.href = 'avatar-tenants.html';
+        outCta.textContent = 'Protect Margin: View Tenant Track & $480 Audit →';
+      } else if (role === 'landlord') {
+        const vacancyLoss = rent * 3;
+        outExp.textContent = 'S$' + vacancyLoss.toLocaleString() + ' Vacancy / Dispute Cost';
+        outBrk.textContent = 'A single deadlocked lease renewal or FTIC dispute escalation costs ~3 months downtime (S$' + vacancyLoss.toLocaleString() + ') plus legal/mediation overhead.';
+        outCta.href = 'avatar-landlords.html';
+        outCta.textContent = 'Explore Landlord & REIT Compliance Track →';
+      } else {
+        const commUpside = Math.round(rent * 1.5 * 4);
+        outExp.textContent = 'S$' + commUpside.toLocaleString() + ' Annual Commission Upside';
+        outBrk.textContent = 'Closing just 4 commercial leases at S$' + rent.toLocaleString() + '/mo generates ~S$' + commUpside.toLocaleString() + ' in gross agency commissions.';
+        outCta.href = 'avatar-agents.html';
+        outCta.textContent = 'Unlock Commercial Deals: View Agent CCLS Track →';
+      }
+    }
+    runRiskCalc();
+  </script>
+</body>
+</html>
